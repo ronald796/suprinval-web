@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suprinval Materiales Eléctricos</title>
+<meta name="description" content="Materiales Eléctricos Suprinval, Valencia, Venezuela. Fusibles de baja y media tensión, Allen-Bradley y material eléctrico en inventario. Importamos bajo pedido: a prueba de explosión, sensores e instrumentación. Cotiza por WhatsApp.">
+<meta property="og:title" content="Suprinval · Materiales Eléctricos">
+<meta property="og:description" content="Fusibles y protección eléctrica para la industria. Inventario inmediato y pedidos a la medida. Cotiza por WhatsApp 0414 413 3761.">
+<meta property="og:image" content="/img/fotos/portada.jpg">
+<meta name="theme-color" content="#0A3F42">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+<style>
+/* Layout: placa de equipo industrial — banda oscura teal arriba, catálogo tipo anaquel con fichas técnicas, franjas de llamado a la acción. */
+:root{
+  --ink:#0A3F42;        /* teal profundo del logo */
+  --teal:#0F5E5A;
+  --leaf:#3DAA7F;       /* verde de la V */
+  --leaf-soft:#E3F3EC;
+  --bg:#F4F7F6;
+  --surface:#FFFFFF;
+  --tint:#EAF1EF;
+  --line:#D5E1DE;
+  --fg:#12292A;
+  --muted:#4F6A68;
+  --on-dark:#E9F5F1;
+  --band:#0A3F42;
+  --band-2:#0C4D4E;
+  --wa:#1FAF55;
+  --wa-ink:#FFFFFF;
+  --warn:#B86E12;
+  --warn-soft:#FBF0DF;
+  --shadow:0 1px 2px rgba(10,63,66,.06),0 8px 24px rgba(10,63,66,.07);
+  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:10px;
+  --gut-l:max(16px,env(safe-area-inset-left,0px));
+  --gut-r:max(16px,env(safe-area-inset-right,0px));
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#BFE6D8;--teal:#6CC9A6;--leaf:#4CC293;--leaf-soft:#123A33;
+  --bg:#071C1E;--surface:#0D2729;--tint:#10302F;--line:#1E4243;
+  --fg:#E4F1EE;--muted:#9DB8B4;--on-dark:#E9F5F1;--band:#04282A;--band-2:#06393A;
+  --wa:#22B85B;--warn:#E7A54D;--warn-soft:#33270F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#BFE6D8;--teal:#6CC9A6;--leaf:#4CC293;--leaf-soft:#123A33;
+  --bg:#071C1E;--surface:#0D2729;--tint:#10302F;--line:#1E4243;
+  --fg:#E4F1EE;--muted:#9DB8B4;--on-dark:#E9F5F1;--band:#04282A;--band-2:#06393A;
+  --wa:#22B85B;--warn:#E7A54D;--warn-soft:#33270F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;letter-spacing:.005em;line-height:1.02;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.4vw,3rem);color:var(--ink)}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.lede{color:var(--muted);max-width:62ch;font-size:1.05rem;margin:0}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:2px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font:600 .95rem/1 var(--f-body);padding:.85em 1.2em;border-radius:8px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s,background .15s,border-color .15s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn-wa{background:var(--wa);color:var(--wa-ink)}
+.btn-wa:hover{filter:brightness(1.07)}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+.btn-ghost:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+.btn-solid{background:var(--teal);color:var(--surface)}
+.btn-sm{font-size:.85rem;padding:.65em .9em}
+
+/* Header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand img{height:38px;width:auto}
+.brand .logo-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand .logo-light{display:none}:root:not([data-theme="light"]) .brand .logo-dark{display:block}}
+:root[data-theme="dark"] .brand .logo-light{display:none}:root[data-theme="dark"] .brand .logo-dark{display:block}
+.brand small{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+nav.main{display:flex;gap:4px;margin-left:auto}
+nav.main a{text-decoration:none;font-weight:500;font-size:.92rem;padding:.5em .75em;border-radius:6px;color:var(--fg)}
+nav.main a:hover{background:var(--tint)}
+.top .btn-wa{padding:.7em 1em}
+@media (max-width:900px){nav.main{display:none}.top .btn-wa{margin-left:auto}}
+@media (max-width:460px){.brand img{height:30px}.top .btn-wa .lbl{display:none}.top .btn-wa{padding:.7em}}
+
+/* Hero */
+.hero{background:var(--band);color:var(--on-dark);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:56px 48px}
+.hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);color:#fff;text-transform:uppercase;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:#7FD9B3}
+.hero p.lede{color:#B9D6CF;margin-top:18px}
+.hero .eyebrow{color:#7FD9B3}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .btn-ghost{color:#fff}
+.specs{display:flex;flex-wrap:wrap;gap:0;margin-top:34px;border-top:1px solid rgba(255,255,255,.14)}
+.specs div{padding:14px 22px 0 0;margin-right:22px;min-width:0}
+.specs b{display:block;font-family:var(--f-display);font-size:1.9rem;color:#fff;line-height:1;font-variant-numeric:tabular-nums}
+.specs span{font-size:.82rem;color:#9FC2BA}
+.hero-art{position:relative;min-width:0}
+.photo{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#0E5553,#062E30 70%);aspect-ratio:4/3.2;max-width:100%}
+.photo svg{position:absolute;inset:0;width:100%;height:100%}
+.photo .tag{position:absolute;left:12px;bottom:12px;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(4,30,31,.78);color:#CDEBE1;padding:.45em .7em;border-radius:5px;border:1px dashed rgba(127,217,179,.5)}
+.hero-art .plate{position:absolute;right:-6px;top:22px;background:var(--surface);color:var(--fg);border-radius:10px;padding:14px 16px;box-shadow:0 12px 30px rgba(0,0,0,.3);width:220px;max-width:70%}
+.plate .pn{font-family:var(--f-mono);font-weight:600;font-size:1.05rem;color:var(--ink)}
+.plate .row{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px;margin-top:6px;gap:8px}
+.plate .ok{color:var(--leaf);font-weight:600}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:40px}.hero-art .plate{right:10px}}
+
+/* Marquee */
+.brands{background:var(--surface);border-bottom:1px solid var(--line);padding-block:22px 18px}
+.brands .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.brands .head span{font-size:.85rem;color:var(--muted)}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee+.marquee{margin-top:10px}
+.track{display:flex;gap:12px;width:max-content;animation:slide 60s linear infinite}
+.marquee.rev .track{animation-direction:reverse;animation-duration:70s}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto}.marquee{-webkit-mask-image:none;mask-image:none}}
+.chipb{font-family:var(--f-display);font-weight:600;font-size:1.35rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);padding:.35em .9em;border:1px solid var(--line);border-radius:999px;background:var(--bg);white-space:nowrap}
+.marquee.rev .chipb{background:var(--leaf-soft);border-color:transparent}
+.chipb i{font-style:normal;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;color:var(--teal);margin-left:.6em;vertical-align:middle}
+
+/* Sections */
+section.block{padding-block:72px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head>div{display:grid;gap:10px;min-width:0}
+
+/* Catalog */
+.toolbar{display:grid;gap:14px;margin-bottom:22px}
+.search{display:flex;align-items:center;gap:10px;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:0 14px;max-width:560px}
+.search:focus-within{border-color:var(--teal)}
+.search svg{width:20px;height:20px;color:var(--muted);flex:none}
+.search input{flex:1;min-width:0;border:0;background:transparent;font:500 1rem var(--f-body);color:var(--fg);padding:.85em 0;outline:none}
+.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.filters button{flex:none;font:500 .86rem var(--f-body);padding:.55em .95em;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column;overflow:hidden;min-width:0;transition:box-shadow .2s,border-color .2s}
+.card:hover{box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--teal) 35%,var(--line))}
+.card .pic{background:var(--tint);aspect-ratio:16/10;display:grid;place-items:center;position:relative;max-width:100%}
+.card .pic svg{width:72%;height:78%}
+.card .pic.photo{background:#fff;border-bottom:1px solid var(--line)}
+.card .pic.photo img{height:92%;width:auto;max-width:92%;object-fit:contain}
+.card .pic.photo .avail{box-shadow:0 0 0 1px rgba(10,63,66,.08)}
+.avail{position:absolute;top:10px;left:10px;font-size:.72rem;font-weight:600;padding:.3em .6em;border-radius:5px;background:var(--leaf-soft);color:var(--teal);display:flex;align-items:center;gap:.4em}
+.avail::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--leaf)}
+.avail.low{background:var(--warn-soft);color:var(--warn)}
+.avail.low::before{background:var(--warn)}
+.avail.hot{background:var(--ink);color:#fff}
+.avail.hot::before{background:#7FD9B3}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.card .brandname{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.card .pn{font-family:var(--f-mono);font-weight:600;font-size:1.12rem;color:var(--ink);overflow-wrap:anywhere}
+.card .desc{font-size:.9rem;color:var(--fg);margin:0}
+.specrow{display:flex;flex-wrap:wrap;gap:6px}
+.specrow span{font-family:var(--f-mono);font-size:.72rem;padding:.25em .5em;border-radius:4px;background:var(--tint);color:var(--ink)}
+.equiv{font-size:.78rem;color:var(--muted)}
+.equiv b{font-family:var(--f-mono);font-weight:500;color:var(--fg)}
+.card .acts{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:auto;padding-top:6px}
+.addbtn{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;font:600 .85rem var(--f-body);padding:0 .8em;cursor:pointer;display:inline-flex;align-items:center;gap:.35em}
+.addbtn:hover{border-color:var(--teal)}
+.addbtn.on{background:var(--leaf-soft);border-color:var(--leaf);color:var(--teal)}
+.more{display:flex;justify-content:center;margin-top:24px}
+.empty{grid-column:1/-1;background:var(--surface);border:1.5px dashed var(--line);border-radius:var(--r);padding:32px;display:grid;gap:12px;justify-items:start}
+.empty h3{font-size:1.8rem;color:var(--ink)}
+.count{font-size:.86rem;color:var(--muted)}
+
+/* Bajo pedido */
+.order{background:var(--surface);border-block:1px solid var(--line)}
+.lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.line{border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px;background:var(--bg);min-width:0}
+.line .ico{width:44px;height:44px;border-radius:9px;background:var(--ink);color:#7FD9B3;display:grid;place-items:center}
+.line .ico svg{width:24px;height:24px}
+.line h3{font-size:1.55rem;color:var(--ink)}
+.line p{margin:0;font-size:.92rem;color:var(--muted)}
+.line .mk{font-family:var(--f-mono);font-size:.74rem;color:var(--teal);letter-spacing:.04em}
+.line button{margin-top:auto;align-self:flex-start}
+.linkbtn{background:none;border:0;padding:0;font:600 .9rem var(--f-body);color:var(--teal);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* RFQ form */
+.rfq{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;margin-top:64px;align-items:start}
+.rfq-copy{display:grid;gap:14px}
+.rfq-copy ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.rfq-copy li{display:flex;gap:10px;font-size:.95rem}
+.rfq-copy li svg{width:20px;height:20px;color:var(--leaf);flex:none;margin-top:2px}
+form.rfqf{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px;min-width:0}
+.fld{display:grid;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:.8rem;font-weight:600;color:var(--ink)}
+.fld input,.fld select,.fld textarea{font:400 .95rem var(--f-body);color:var(--fg);background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:.7em .8em;width:100%;min-width:0}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--teal)}
+.fld textarea{min-height:92px;resize:vertical}
+.err{color:#C23B2E;font-size:.82rem;grid-column:1/-1;margin:0}
+form.rfqf .btn{grid-column:1/-1;justify-self:start}
+@media (max-width:860px){.rfq{grid-template-columns:1fr}form.rfqf{grid-template-columns:1fr}}
+
+/* Asesoría */
+.adv{background:var(--band);color:var(--on-dark)}
+.adv h2{color:#fff}.adv .eyebrow{color:#7FD9B3}.adv .lede{color:#B9D6CF}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;border-top:1px solid rgba(255,255,255,.16)}
+.step{padding:22px 20px 0 0;display:grid;gap:8px;align-content:start;min-width:0}
+.step .n{font-family:var(--f-mono);font-size:.78rem;color:#7FD9B3}
+.step h3{font-size:1.5rem;color:#fff}
+.step p{margin:0;font-size:.92rem;color:#B9D6CF}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr;gap:0 20px}}
+@media (max-width:500px){.steps{grid-template-columns:1fr}}
+.adv-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.adv .btn-ghost{color:#fff}
+
+/* Industrias */
+.inds{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ind{display:grid;gap:10px;min-width:0}
+.ind .photo{aspect-ratio:4/5}
+.ind h3{font-size:1.4rem;color:var(--ink)}
+.ind p{margin:0;font-size:.88rem;color:var(--muted)}
+@media (max-width:900px){.inds{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.inds{grid-template-columns:1fr}.ind .photo{aspect-ratio:16/10}}
+
+
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero-photo{box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(4,30,31,.55))}
+.shot{background:#0B4A4A}
+.shot img{transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s}
+.ind:hover .shot img{transform:scale(1.045)}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,30,31,0) 60%,rgba(4,30,31,.35));pointer-events:none}
+.shot .cap{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;font-family:var(--f-display);font-weight:700;font-size:1.5rem;line-height:1.05;color:#fff;text-transform:uppercase;letter-spacing:.02em;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+@media (prefers-reduced-motion:reduce){.shot img{transition:none}.ind:hover .shot img{transform:none}}
+/* Contact / footer */
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+.cbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;gap:18px;min-width:0}
+.cline{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start}
+.cline svg{width:22px;height:22px;color:var(--teal)}
+.cline b{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600}
+.cline span,.cline a{font-size:1.05rem;color:var(--fg)}
+.mono{font-family:var(--f-mono)}
+.copybtn{margin-left:8px;font:500 .75rem var(--f-body);border:1px solid var(--line);background:var(--bg);color:var(--teal);border-radius:5px;padding:.2em .55em;cursor:pointer}
+.ctabox{background:var(--leaf-soft);border-radius:12px;padding:26px;display:grid;gap:14px;align-content:start}
+.ctabox h3{font-size:2rem;color:var(--ink)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+footer{background:var(--band);color:#9FC2BA;padding-block:36px 110px;font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+footer img{height:34px;width:auto}
+
+/* Floating WA + quote list */
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fab-wa{width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+.fab-wa svg{width:30px;height:30px}
+.listbtn{display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--surface);border:0;border-radius:999px;padding:.75em 1.1em;font:600 .9rem var(--f-body);cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.listbtn .badge{background:#7FD9B3;color:#062E30;border-radius:999px;min-width:24px;padding:0 6px;height:24px;display:grid;place-items:center;font-size:.8rem;font-variant-numeric:tabular-nums}
+.drawer{position:fixed;inset:0;z-index:90;display:flex;justify-content:flex-end;background:rgba(3,20,21,.45)}
+.panel{background:var(--surface);width:min(440px,100%);height:100%;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.panel header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.panel header h3{font-size:1.7rem;color:var(--ink)}
+.x{background:none;border:0;font-size:1.6rem;line-height:1;cursor:pointer;color:var(--muted);padding:4px 8px}
+.items{flex:1;overflow-y:auto;padding:12px 20px;display:grid;gap:10px;align-content:start}
+.it{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.it .pn{font-family:var(--f-mono);font-weight:600;color:var(--ink);font-size:.95rem;overflow-wrap:anywhere}
+.it small{color:var(--muted);display:block}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:6px}
+.qty button{border:0;background:none;color:var(--ink);width:30px;height:30px;font-size:1.05rem;cursor:pointer}
+.qty input{width:44px;text-align:center;border:0;background:transparent;color:var(--fg);font:500 .9rem var(--f-mono)}
+.rm{grid-column:1/-1;justify-self:start;font-size:.78rem}
+.panel footer{background:none;padding:16px 20px;border-top:1px solid var(--line);display:grid;gap:10px;color:var(--fg)}
+.panel .fld input{font-size:.9rem}
+.note{font-size:.78rem;color:var(--muted);margin:0}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--surface);padding:.7em 1.1em;border-radius:8px;font-size:.9rem;z-index:100;box-shadow:var(--shadow)}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Suprinval, inicio">
+      <img class="logo-light" src="img/logo-8fbb9d.png" alt="Suprinval C.A.">
+      <img class="logo-dark" src="img/logo-a9a33f.png" alt="Suprinval C.A.">
+    </a>
+    <nav class="main" aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#pedido">Bajo pedido</a>
+      <a href="#asesoria">Asesoría</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-wa" data-wa="Hola Suprinval, quisiera una cotización." href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span class="lbl">0414 413 3761</span></a>
+  </div>
+</header>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  </defs>
+</svg>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Materiales Eléctricos · Valencia, Carabobo</p>
+      <h1 style="margin-top:14px">Fusibles y protección eléctrica <em>para la industria que no puede parar</em></h1>
+      <p class="lede">Más de 1.500 referencias en inventario, de baja a media tensión. Y lo que no está en el anaquel, lo importamos y te lo llevamos a sitio.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" data-wa="Hola Suprinval, necesito cotizar un material." href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+        <a class="btn btn-ghost" href="#pedido">Pedido a la medida</a>
+      </div>
+      <div class="specs">
+        <div><b>+1.500</b><span>referencias en stock</span></div>
+        <div><b>1 A – 4.000 A</b><span>baja tensión</span></div>
+        <div><b>hasta 24 kV</b><span>media tensión</span></div>
+        <div><b>+30</b><span>marcas</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="photo hero-photo" id="hero-photo"><img src="img/fotos/portada.jpg" alt="Planta de generación y procesamiento iluminada al anochecer" width="1200" height="960"></div>
+      <div class="plate" aria-label="Ejemplo de ficha en inventario">
+        <div class="eyebrow" style="font-size:.62rem">En inventario</div>
+        <div class="pn">A70QS500-4</div>
+        <div style="font-size:.82rem;color:var(--muted)">Ultrarrápido semiconductor · Ferraz Shawmut</div>
+        <div class="row"><span>500 A · 700 V</span><span class="ok">Disponible</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands" aria-label="Marcas">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow" style="margin:0">Marcas que manejamos</p><span>En stock y bajo pedido</span></div>
+  </div>
+  <div class="marquee"><div class="track" id="mq1"></div></div>
+  <div class="marquee rev"><div class="track" id="mq2"></div></div>
+</section>
+
+<section class="block" id="catalogo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Catálogo en inventario</p>
+        <h2>Disponible para entrega inmediata</h2>
+        <p class="lede">Busca por número de parte, marca o amperaje. Pide la cotización directo por WhatsApp o arma una lista con varios productos.</p>
+      </div>
+    </div>
+    <div class="toolbar">
+      <label class="search" for="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="sr">Buscar</span><input id="q" type="search" placeholder="Ej. LPJ, KTK 15, 1756, 30 A, Littelfuse…" autocomplete="off"></label>
+      <div class="filters" id="filters" role="group" aria-label="Categorías"></div>
+      <p class="count" id="count"></p>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="more"><button class="btn btn-ghost" id="moreBtn" style="color:var(--ink)">Mostrar más productos</button></div>
+  </div>
+</section>
+
+<section class="block order" id="pedido">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Contra pedido</p>
+        <h2>Lo que necesites, te lo traemos a sitio</h2>
+        <p class="lede">Importamos líneas que no tenemos en anaquel: equipos a prueba de explosión, instrumentación, automatización y fusibles de cualquier clase o amperaje.</p>
+      </div>
+    </div>
+    <div class="lines" id="lines"></div>
+
+    <div class="rfq">
+      <div class="rfq-copy">
+        <p class="eyebrow">Cotización a la medida</p>
+        <h2>Cuéntanos qué necesitas</h2>
+        <p class="lede">Envíanos el número de parte, una foto de la placa o la descripción del equipo. Te respondemos con precio, plazo de entrega y equivalentes disponibles.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Identificamos equivalentes entre marcas y referencias descontinuadas</li>
+          <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Cotización formal con RIF para tu departamento de compras</li>
+          <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Entrega en planta en todo el país</li>
+        </ul>
+      </div>
+      <form class="rfqf" id="rfq" novalidate>
+        <div class="fld"><label for="f-emp">Empresa</label><input id="f-emp" placeholder="Nombre de la empresa"></div>
+        <div class="fld"><label for="f-con">Persona de contacto</label><input id="f-con" placeholder="Nombre y cargo"></div>
+        <div class="fld"><label for="f-line">Línea</label>
+          <select id="f-line">
+            <option>Fusibles (cualquier clase)</option>
+            <option>A prueba de explosión</option>
+            <option>Sensores e instrumentación</option>
+            <option>Automatización / PLC</option>
+            <option>Media tensión</option>
+            <option>Otro material eléctrico</option>
+          </select></div>
+        <div class="fld"><label for="f-brand">Marca preferida</label><input id="f-brand" placeholder="Appleton, Emerson, Bussmann…"></div>
+        <div class="fld full"><label for="f-pn">Número de parte o descripción</label><textarea id="f-pn" placeholder="Ej. Appleton GUA-75 caja a prueba de explosión 3/4&quot;, 10 unidades"></textarea></div>
+        <div class="fld"><label for="f-qty">Cantidad</label><input id="f-qty" inputmode="numeric" placeholder="Ej. 10"></div>
+        <div class="fld"><label for="f-when">¿Para cuándo?</label>
+          <select id="f-when"><option>Urgente (parada de planta)</option><option>Esta semana</option><option>Este mes</option><option>Proyecto / sin apuro</option></select></div>
+        <div class="fld full"><label for="f-site">Lugar de entrega</label><input id="f-site" placeholder="Ciudad o planta"></div>
+        <p class="err" id="f-err" hidden>Escribe el número de parte o una descripción para poder cotizar.</p>
+        <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Enviar solicitud por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="block adv" id="asesoria">
+  <div class="wrap">
+    <p class="eyebrow">Asesoría técnica</p>
+    <h2 style="margin-top:12px">¿No sabes qué fusible lleva tu tablero?</h2>
+    <p class="lede" style="margin-top:14px">Te ayudamos a seleccionar la protección correcta, encontrar el equivalente de una referencia vieja y coordinar protecciones en tableros de baja y media tensión.</p>
+    <div class="steps">
+      <div class="step"><span class="n">PASO 1</span><h3>Nos envías la referencia</h3><p>El número de parte, una foto del fusible o de la placa del equipo.</p></div>
+      <div class="step"><span class="n">PASO 2</span><h3>Identificamos el equivalente</h3><p>Cruzamos marcas: Bussmann, Littelfuse, Mersen, Gould Shawmut, Edison y más.</p></div>
+      <div class="step"><span class="n">PASO 3</span><h3>Cotizamos con plazo</h3><p>Precio, disponibilidad inmediata o tiempo de importación.</p></div>
+      <div class="step"><span class="n">PASO 4</span><h3>Entregamos en sitio</h3><p>Llevamos el material a tu planta, listo para instalar.</p></div>
+    </div>
+    <div class="adv-ctas">
+      <a class="btn btn-wa" data-wa="Hola Suprinval, necesito asesoría para seleccionar un fusible / material." href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Pedir asesoría</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="industrias">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Sectores que atendemos</p><h2>Donde está la carga, está Suprinval</h2></div></div>
+    <div class="inds" id="inds"></div>
+  </div>
+</section>
+
+<section class="block" id="contacto" style="padding-top:0">
+  <div class="wrap contact">
+    <div class="cbox">
+      <div><p class="eyebrow">Contacto</p><h2 style="margin-top:10px">Materiales Eléctricos Suprinval</h2></div>
+      <div class="cline"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg><div><b>WhatsApp y teléfono</b><span class="mono" id="phone">0414 413 3761</span><button class="copybtn" data-copy="+58 414 413 3761" type="button">Copiar</button></div></div>
+      <div class="cline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>Dirección</b><span>Calle San Diego, Edif. San Diego, piso 102<br>Valencia, Edo. Carabobo</span><br><a href="https://www.google.com/maps/search/?api=1&query=Edificio+San+Diego+Calle+San+Diego+Valencia+Carabobo" target="_blank" rel="noopener" style="font-size:.88rem;color:var(--teal)">Ver en el mapa</a></div></div>
+      <div class="cline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><b>Correo</b><span class="mono">ventas@suprinval.com</span><button class="copybtn" data-copy="ventas@suprinval.com" type="button">Copiar</button></div></div>
+      <div class="cline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><div><b>RIF</b><span class="mono">J-30807532-9</span></div></div>
+    </div>
+    <div class="ctabox">
+      <p class="eyebrow">Respuesta rápida</p>
+      <h3>¿Parada de planta? Escríbenos ahora.</h3>
+      <p class="lede" style="font-size:.98rem">Revisamos inventario en el momento y, si no lo tenemos, te damos el plazo de importación el mismo día.</p>
+      <a class="btn btn-wa" style="justify-self:start" data-wa="Hola Suprinval, tengo una urgencia y necesito este material:" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-a9a33f.png" alt="Suprinval C.A.">
+    <span>Materiales Eléctricos Suprinval C.A. · RIF J-30807532-9 · Valencia, Venezuela</span>
+  </div>
+</footer>
+
+<div class="fab">
+  <button class="listbtn" id="listBtn" type="button" hidden>Lista de cotización <span class="badge" id="badge">0</span></button>
+  <a class="fab-wa" data-wa="Hola Suprinval, quisiera una cotización." href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></a>
+</div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="dt">
+    <header><h3 id="dt">Lista de cotización</h3><button class="x" id="closeD" aria-label="Cerrar">×</button></header>
+    <div class="items" id="items"></div>
+    <footer>
+      <div class="fld"><label for="l-emp">Empresa (opcional)</label><input id="l-emp" placeholder="Para la cotización formal"></div>
+      <a class="btn btn-wa" id="sendList" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Enviar lista por WhatsApp</a>
+      <button class="btn btn-ghost btn-sm" id="copyList" type="button" style="color:var(--ink)">Copiar lista</button>
+      <p class="note">Se abre WhatsApp con tu lista escrita. Si no se abre, copia la lista y envíala al 0414 413 3761.</p>
+    </footer>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const WA = "584144133761";
+const waLink = t => "https://wa.me/" + WA + "?text=" + encodeURIComponent(t);
+document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink(a.dataset.wa));
+
+/* ---------- Marcas ---------- */
+const stockBrands = ["Bussmann","Littelfuse","Mersen","Ferraz Shawmut","Gould Shawmut","Allen-Bradley","General Electric","Eaton","Siemens","ABB","SIBA","Edison","Westinghouse","Cutler-Hammer","Square D","Legrand","ETI","Kyoritsu","Fluke","Wickmann","Schurter","Tron"];
+const orderBrands = ["Appleton","Emerson","Crouse-Hinds","Killark","Rosemount","Allen-Bradley","Schneider Electric","Pepperl+Fuchs","Sick","Banner","Turck","Hubbell"];
+function fillMq(id, arr, tag){ const el=document.getElementById(id); const html=arr.map(b=>`<span class="chipb">${b}${tag?`<i>${tag}</i>`:""}</span>`).join(""); el.innerHTML=html+html.replace(/<span class/g,'<span aria-hidden="true" class'); }
+fillMq("mq1", stockBrands, "");
+fillMq("mq2", orderBrands, "BAJO PEDIDO");
+
+/* ---------- Ilustraciones de producto ---------- */
+const C = {a:"var(--teal)", b:"var(--ink)", c:"var(--leaf)", d:"var(--surface)", e:"var(--line)"};
+const ART = {
+  cartucho:`<svg viewBox="0 0 200 120"><rect x="30" y="38" width="140" height="44" rx="6" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><rect x="18" y="34" width="30" height="52" rx="5" fill="${C.a}"/><rect x="152" y="34" width="30" height="52" rx="5" fill="${C.a}"/><rect x="62" y="50" width="76" height="20" rx="3" fill="${C.c}" opacity=".85"/><rect x="70" y="57" width="40" height="6" rx="2" fill="${C.d}"/></svg>`,
+  cuchilla:`<svg viewBox="0 0 200 120"><rect x="6" y="52" width="40" height="16" rx="2" fill="${C.a}"/><rect x="154" y="52" width="40" height="16" rx="2" fill="${C.a}"/><rect x="38" y="36" width="20" height="48" rx="4" fill="${C.b}"/><rect x="142" y="36" width="20" height="48" rx="4" fill="${C.b}"/><rect x="56" y="38" width="88" height="44" rx="5" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><rect x="72" y="52" width="56" height="16" rx="3" fill="${C.c}" opacity=".85"/><circle cx="18" cy="60" r="4" fill="${C.d}"/><circle cx="182" cy="60" r="4" fill="${C.d}"/></svg>`,
+  ultra:`<svg viewBox="0 0 200 120"><rect x="8" y="50" width="36" height="20" rx="2" fill="${C.a}"/><rect x="156" y="50" width="36" height="20" rx="2" fill="${C.a}"/><circle cx="20" cy="60" r="5" fill="${C.d}"/><circle cx="180" cy="60" r="5" fill="${C.d}"/><rect x="40" y="30" width="120" height="60" rx="8" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><path d="M92 40 80 64h16l-8 20 26-30H98l8-14z" fill="${C.c}"/></svg>`,
+  nh:`<svg viewBox="0 0 200 120"><rect x="62" y="22" width="76" height="76" rx="6" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><rect x="20" y="52" width="44" height="16" rx="2" fill="${C.a}"/><rect x="136" y="52" width="44" height="16" rx="2" fill="${C.a}"/><rect x="82" y="40" width="36" height="40" rx="3" fill="${C.c}" opacity=".85"/><rect x="92" y="14" width="16" height="10" rx="2" fill="${C.b}"/><rect x="92" y="96" width="16" height="10" rx="2" fill="${C.b}"/></svg>`,
+  botella:`<svg viewBox="0 0 200 120"><rect x="78" y="14" width="44" height="18" rx="3" fill="${C.a}"/><rect x="72" y="30" width="56" height="64" rx="8" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><rect x="84" y="94" width="32" height="14" rx="3" fill="${C.a}"/><circle cx="100" cy="23" r="5" fill="${C.c}"/><rect x="88" y="48" width="24" height="30" rx="3" fill="${C.c}" opacity=".5"/></svg>`,
+  vidrio:`<svg viewBox="0 0 200 120"><rect x="44" y="44" width="112" height="32" rx="4" fill="${C.d}" opacity=".7" stroke="${C.b}" stroke-width="2"/><rect x="26" y="42" width="26" height="36" rx="4" fill="${C.a}"/><rect x="148" y="42" width="26" height="36" rx="4" fill="${C.a}"/><path d="M52 60c20-10 30 10 48 0s30 10 48 0" fill="none" stroke="${C.b}" stroke-width="2.4"/></svg>`,
+  ceramica:`<svg viewBox="0 0 200 120"><rect x="44" y="44" width="112" height="32" rx="4" fill="${C.d}" stroke="${C.b}" stroke-width="2.5"/><rect x="26" y="42" width="26" height="36" rx="4" fill="${C.a}"/><rect x="148" y="42" width="26" height="36" rx="4" fill="${C.a}"/><rect x="64" y="54" width="72" height="12" rx="2" fill="${C.c}" opacity=".6"/></svg>`,
+  mt:`<svg viewBox="0 0 200 120"><rect x="34" y="40" width="132" height="40" rx="20" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><rect x="14" y="44" width="28" height="32" rx="5" fill="${C.a}"/><rect x="158" y="44" width="28" height="32" rx="5" fill="${C.a}"/><rect x="186" y="54" width="10" height="12" rx="2" fill="${C.b}"/><text x="100" y="66" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="600" fill="${C.b}">kV</text></svg>`,
+  plc:`<svg viewBox="0 0 200 120"><rect x="64" y="10" width="72" height="100" rx="5" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><rect x="74" y="20" width="52" height="12" rx="2" fill="${C.b}"/>${[0,1,2,3,4,5,6,7].map(i=>`<circle cx="${82+(i%4)*12}" cy="${44+Math.floor(i/4)*10}" r="3" fill="${i%3?C.c:C.e}"/>`).join("")}<rect x="74" y="66" width="52" height="34" rx="2" fill="${C.e}"/>${[0,1,2,3].map(i=>`<rect x="80" y="${70+i*7}" width="40" height="3" fill="${C.a}"/>`).join("")}</svg>`,
+  hmi:`<svg viewBox="0 0 200 120"><rect x="34" y="14" width="132" height="92" rx="8" fill="${C.b}"/><rect x="44" y="24" width="112" height="66" rx="3" fill="${C.d}"/><rect x="52" y="60" width="18" height="22" fill="${C.c}"/><rect x="76" y="48" width="18" height="34" fill="${C.a}"/><rect x="100" y="54" width="18" height="28" fill="${C.c}"/><rect x="124" y="38" width="18" height="44" fill="${C.a}"/></svg>`,
+  switch:`<svg viewBox="0 0 200 120"><rect x="60" y="40" width="70" height="70" rx="6" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><rect x="90" y="22" width="10" height="20" fill="${C.a}"/><path d="M95 26 150 10" stroke="${C.b}" stroke-width="6" stroke-linecap="round"/><circle cx="152" cy="10" r="8" fill="${C.c}"/><rect x="72" y="56" width="46" height="14" rx="2" fill="${C.c}" opacity=".6"/><rect x="88" y="104" width="14" height="10" fill="${C.a}"/></svg>`,
+  contactor:`<svg viewBox="0 0 200 120"><rect x="56" y="14" width="88" height="94" rx="6" fill="${C.d}" stroke="${C.b}" stroke-width="3"/>${[0,1,2].map(i=>`<rect x="${68+i*24}" y="22" width="16" height="14" rx="2" fill="${C.a}"/><rect x="${68+i*24}" y="86" width="16" height="14" rx="2" fill="${C.a}"/>`).join("")}<rect x="72" y="48" width="56" height="26" rx="3" fill="${C.c}" opacity=".6"/></svg>`,
+  heater:`<svg viewBox="0 0 200 120"><rect x="40" y="40" width="120" height="40" rx="4" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><path d="M56 60h10l6-10 10 20 10-20 10 20 10-20 10 20 6-10h16" fill="none" stroke="${C.c}" stroke-width="3" stroke-linejoin="round"/><rect x="26" y="52" width="16" height="16" rx="2" fill="${C.a}"/><rect x="158" y="52" width="16" height="16" rx="2" fill="${C.a}"/></svg>`,
+  bombillo:`<svg viewBox="0 0 200 120"><circle cx="100" cy="46" r="28" fill="${C.d}" stroke="${C.b}" stroke-width="3"/><path d="M90 52c4-12 16-12 20 0" fill="none" stroke="${C.c}" stroke-width="3"/><rect x="86" y="72" width="28" height="30" rx="3" fill="${C.a}"/><circle cx="80" cy="88" r="4" fill="${C.b}"/><circle cx="120" cy="88" r="4" fill="${C.b}"/></svg>`,
+  terminal:`<svg viewBox="0 0 200 120"><circle cx="50" cy="60" r="20" fill="none" stroke="${C.a}" stroke-width="10"/><rect x="66" y="50" width="30" height="20" fill="${C.a}"/><rect x="94" y="44" width="56" height="32" rx="8" fill="${C.c}"/><rect x="148" y="54" width="40" height="12" rx="2" fill="${C.b}"/></svg>`,
+  medidor:`<svg viewBox="0 0 200 120"><rect x="72" y="40" width="56" height="74" rx="8" fill="${C.b}"/><path d="M78 44c-8-34 52-34 44 0" fill="none" stroke="${C.c}" stroke-width="10" stroke-linecap="round"/><rect x="80" y="54" width="40" height="22" rx="3" fill="${C.d}"/><text x="100" y="70" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" fill="${C.b}">12.4A</text><circle cx="100" cy="96" r="8" fill="${C.a}"/></svg>`
+};
+
+/* ---------- Catálogo (extraído del inventario) ---------- */
+const CATS = [
+  ["all","Todos"],["top","Más pedidos"],["ul","Clase J · RK · CC · T"],["midget","Midget y control"],["semi","Ultrarrápidos"],["cuchilla","Cuchilla y limitadores"],["mt","Media tensión"],["eu","NH · Diazed · BS88"],["mini","Vidrio y cerámica"],["ab","Allen-Bradley"],["control","Térmicos y bombillos"],["otros","Terminales e instrumentos"]
+];
+// [cat, art, pn, marca, descripción, specs[], equivalentes, qty]
+const TOP = [
+ ["semi","ultra","A50P1200-4","Mersen (Ferraz Shawmut)","Fusible ultrarrápido para semiconductores Form 101",["1200 A","500 V CA/CC","aR"],"FWH · KBH · L50S",1],
+ ["semi","nh","35FE","Bussmann (Eaton)","Fusible ultrarrápido BS88 para semiconductores",["35 A","690 V CA / 500 V CC","BS88"],"",5],
+ ["semi","nh","40FE","Bussmann (Eaton)","Fusible ultrarrápido BS88 para semiconductores",["40 A","690 V CA / 500 V CC","BS88"],"",3],
+ ["ul","cartucho","JLLS20","Littelfuse","Fusible Clase T ultracompacto, acción rápida",["20 A","600 V CA","Clase T"],"A6T · TJS · JJS",5],
+ ["ul","cartucho","JLLS25","Littelfuse","Fusible Clase T ultracompacto, acción rápida",["25 A","600 V CA","Clase T"],"A6T · TJS · JJS",5],
+ ["ul","cartucho","TRS10R","Mersen (Ferraz Shawmut)","Fusible Clase RK5 con retardo de tiempo",["10 A","600 V CA / 300 V CC","RK5"],"FRS-R · ECS-R · FLS-R",5],
+ ["ul","cartucho","TRS35R","Mersen (Ferraz Shawmut)","Fusible Clase RK5 con retardo de tiempo",["35 A","600 V CA / 300 V CC","RK5"],"FRS-R · ECS-R · FLS-R",1],
+ ["ul","cartucho","ATDR4","Mersen (Ferraz Shawmut)","Fusible Clase CC con retardo Amp-Trap",["4 A","600 V CA / 300 V CC","Clase CC"],"LP-CC · CCMR · EDCC",1],
+ ["ul","cartucho","LP-CC-12","Bussmann (Eaton)","Fusible Clase CC Low-Peak doble elemento",["12 A","600 V CA","Clase CC"],"ATDR · CCMR · EDCC",4],
+ ["ul","cartucho","CCMR 7-1/2","Littelfuse","Fusible Clase CC alto rendimiento para motores",["7,5 A","600 V CA","Clase CC"],"ATDR · LP-CC · EDCC",10],
+ ["ul","cartucho","CCMR20","Littelfuse","Fusible Clase CC con retardo de tiempo",["20 A","600 V CA","Clase CC"],"ATDR · LP-CC · EDCC",10],
+ ["ul","cartucho","CCMR12","Littelfuse","Fusible Clase CC con retardo de tiempo",["12 A","600 V CA","Clase CC"],"ATDR · LP-CC · EDCC",2],
+ ["ul","cartucho","CCMR15","Littelfuse","Fusible Clase CC con retardo de tiempo",["15 A","600 V CA","Clase CC"],"ATDR · LP-CC · EDCC",1]
+].map(p=>(p.push(true),p));
+const P = [...TOP,
+ ["ul","cartucho","LPJ-5SP","Bussmann","Fusible Low-Peak Clase J, retardo de tiempo",["5 A","600 V","Clase J"],"AJT · JDL · JTD",19],
+ ["ul","cartucho","JDL 5","Edison","Fusible Clase J retardo de tiempo",["5 A","600 V","Clase J"],"LPJ · AJT · JTD",50],
+ ["ul","cartucho","AJT40","Mersen (Ferraz Shawmut)","Fusible Amp-Trap Clase J, retardo de tiempo",["40 A","600 V","Clase J"],"LPJ · JDL · JTD",8],
+ ["ul","cartucho","TRS30R","Gould Shawmut","Fusible Tri-Onic Clase RK5, doble elemento",["30 A","600 V","RK5"],"FRS-R · ECS-R · FLS-R",92],
+ ["ul","cartucho","TRS20R","Ferraz Shawmut","Fusible Tri-Onic Clase RK5, doble elemento",["20 A","600 V","RK5"],"FRS-R · ECS-R · FLS-R",170],
+ ["ul","cartucho","FRS-R-30","Bussmann Fusetron","Fusible Clase RK5 doble elemento",["30 A","600 V","RK5"],"TRS-R · ECS-R · FLS-R",73],
+ ["ul","cartucho","FLSR50","Littelfuse","Fusible Clase RK5 retardo de tiempo",["50 A","600 V","RK5"],"TRS-R · FRS-R · ECS-R",19],
+ ["ul","cartucho","ECNR30","Edison Bullet","Fusible Clase RK5 retardo de tiempo",["30 A","250 V","RK5"],"TR-R · FRN-R · FLNR",194],
+ ["ul","cartucho","LLNRK1","Littelfuse","Fusible Clase RK1 limitador de corriente",["1 A","250 V","RK1"],"TR-R · FRN-R · ECN-R",199],
+ ["ul","cartucho","TR100R","Gould Shawmut","Fusible Tri-Onic Clase RK5",["100 A","250 V","RK5"],"FRN-R · FLNR · ECN-R",56],
+ ["ul","cartucho","EDCC-1","Edison","Fusible Clase CC retardo de tiempo",["1 A","600 V","Clase CC"],"ATDR · LP-CC · CCMR",350],
+ ["midget","cartucho","ATM15","Mersen","Fusible Midget acción rápida 10×38",["15 A","600 V","10×38"],"KTK · KLK · MCL",202],
+ ["midget","cartucho","ATM20","Mersen / Ferraz","Fusible Midget acción rápida 10×38",["20 A","600 V","10×38"],"KTK · KLK · MCL",201],
+ ["midget","cartucho","ATMR1","Ferraz Shawmut","Fusible Midget Clase CC acción rápida",["1 A","600 V","Clase CC"],"KTK-R · KLKR · HCLR",194],
+ ["midget","cartucho","KTK15","Bussmann Limitron","Fusible Midget acción rápida",["15 A","600 V","10×38"],"ATM · KLK · MCL",71],
+ ["midget","cartucho","FNM 4/10","Bussmann Fusetron","Fusible Midget retardo de tiempo",["0,4 A","250 V","10×38"],"TRM · FLM · MEN",86],
+ ["midget","cartucho","MEN2","Edison","Fusible Midget retardo de tiempo",["2 A","250 V","10×38"],"TRM · FNM · FLM",91],
+ ["midget","cartucho","ATQR-6/10","Ferraz Shawmut","Fusible Midget Clase CC retardo de tiempo",["0,6 A","600 V","Clase CC"],"FNQ-R · KLDR · HCTR",66],
+ ["midget","cartucho","OT45","SIBA","Fusible de cartucho Clase K5 uso general",["45 A","250 V","K5"],"KON · NON",139],
+ ["semi","ultra","A70QS500-4","Ferraz Shawmut","Fusible ultrarrápido para semiconductores",["500 A","700 V","aR"],"FWP · E70S · L70S",36],
+ ["semi","ultra","A70P200-4","Ferraz Shawmut","Fusible ultrarrápido Amp-Trap",["200 A","700 V","aR"],"FWP · E70S · L70S",35],
+ ["semi","ultra","A60X100-4","Gould Shawmut","Fusible ultrarrápido para semiconductores",["100 A","600 V","aR"],"E60C · KAC · KBC",26],
+ ["semi","ultra","FWP100","Bussmann","Fusible ultrarrápido serie FWP",["100 A","700 V","aR"],"A70P · E70S · L70S",18],
+ ["semi","ultra","L25S40","Littelfuse","Fusible ultrarrápido serie L25S",["40 A","250 V","aR"],"A25X · KAB · FWX",100],
+ ["semi","ultra","KAB175","Tron","Fusible ultrarrápido serie KAB",["175 A","250 V","aR"],"A25X · FWX · E25S",19],
+ ["semi","ultra","A50P125-4","Ferraz Shawmut","Fusible ultrarrápido serie A50P",["125 A","500 V","aR"],"FWH · KBH · L50S",11],
+ ["semi","nh","170M5811","Bussmann","Fusible ultrarrápido cuerpo cuadrado DIN",["550 A","690 V","aR"],"Protistor · SITOR",6],
+ ["semi","nh","3NE4337-6","Siemens","Fusible SITOR ultrarrápido",["710 A","800 V","aR"],"170M · Protistor",2],
+ ["cuchilla","cuchilla","OT100","Gould Shawmut","Fusible de cartucho con cuchilla, uso general",["100 A","250 V","K5"],"KON · NON",79],
+ ["cuchilla","cuchilla","NOS80","Bussmann","Fusible de cartucho con cuchilla, uso general",["80 A","600 V","K5"],"OTS · KOS · ONE",53],
+ ["cuchilla","cuchilla","KOS35","Edison","Fusible de cartucho 600 V uso general",["35 A","600 V","K5"],"OTS · NOS · ONE",50],
+ ["cuchilla","cuchilla","CNL-400","Ferraz Shawmut","Fusible limitador para baterías y vehículos",["400 A","125 V","CNL"],"ANL · ELNE · ANN",150],
+ ["cuchilla","cuchilla","ACK-200","Bussmann Fusetron","Fusible limitador de corriente atornillable",["200 A","130 V","CNL"],"ECK · CCK · ECL",58],
+ ["cuchilla","cuchilla","KRP-C 800","Bussmann","Fusible Low-Peak Clase L",["800 A","600 V","Clase L"],"A4BY · KTU",1],
+ ["cuchilla","cuchilla","A4BY800","Ferraz Shawmut","Fusible Amp-Trap Clase L",["800 A","600 V","Clase L"],"KRP-C · KTU",4],
+ ["cuchilla","cuchilla","TAS5","FEME","Fusible de cartucho uso general",["5 A","250 V","—"],"TBS",517],
+ ["mt","mt","EJO-1C 0.5E","General Electric","Fusible limitador para transformador de potencial",["0,5 E","8,25 kV","PT"],"Consultar equivalente",12],
+ ["mt","mt","XRNT-1 100A","Jasco","Fusible de media tensión para transformador",["100 A","24 kV","XRNT"],"Consultar equivalente",3],
+ ["mt","mt","CEF 100A","ABB","Fusible limitador de media tensión",["100 A","7,2 kV","CEF"],"Consultar equivalente",2],
+ ["mt","mt","3GA2 417","Siemens","Fusible HH de media tensión",["100 A","24 kV","HH"],"Consultar equivalente",1],
+ ["mt","mt","Tipo K 8A","—","Eslabón fusible tipo K para cortacircuito",["8 A","15 kV","Tipo K"],"Tipo T bajo pedido",47],
+ ["mt","mt","Tipo K 50A","—","Eslabón fusible tipo K para cortacircuito",["50 A","15 kV","Tipo K"],"Tipo T bajo pedido",27],
+ ["eu","nh","HRC-0 16A","SIBA","Fusible NH tamaño 0 gL/gG",["16 A","500 V","NH0"],"Bussmann · Eaton",81],
+ ["eu","nh","GSE175","English Electric","Fusible BS88 para motores",["175 A","415 V","BS88"],"LET · GSA",1323],
+ ["eu","botella","DZ-E27 20A","Fusivenca / Weber","Fusible Diazed tipo botella",["20 A","500 V","E27"],"Siemens · Camsco",558],
+ ["eu","botella","DZ-E33 50A","Lindner","Fusible Diazed tipo botella",["50 A","500 V","E33"],"Siemens · Weber",225],
+ ["eu","botella","NEOZED D02 63A","ETI","Fusible Neozed",["63 A","400 V","D02"],"Siemens · Lindner",40],
+ ["eu","botella","SILIZED 63A","—","Fusible Silized ultrarrápido",["63 A","500 V","aR"],"Siemens",284],
+ ["mini","vidrio","AGC 20","Bussmann","Fusible de vidrio acción rápida 6,3×32",["20 A","32 V","6,3×32"],"GGC · BGC",1817],
+ ["mini","vidrio","AGC 1.6/10","Bussmann","Fusible de vidrio acción rápida 6,3×32",["0,16 A","250 V","6,3×32"],"GGC · BGC",669],
+ ["mini","vidrio","MDL 1-1/2","Bussmann","Fusible de vidrio retardo de tiempo",["1,5 A","250 V","6,3×32"],"GDL · MDX",524],
+ ["mini","vidrio","5×20 6,3 A","—","Fusible de vidrio 5×20 mm",["6,3 A","250 V","5×20"],"GMA · GDA",676],
+ ["mini","ceramica","ABC 5","Fusca","Fusible cerámico acción rápida",["5 A","250 V","6,3×32"],"GAB · BBC",883],
+ ["mini","ceramica","MDA 30","Bussmann","Fusible cerámico retardo de tiempo",["30 A","250 V","6,3×32"],"GSA · BDA",211],
+ ["mini","vidrio","Bi-pin T4A","Wickmann","Fusible miniatura para tarjeta electrónica",["4 A","250 V","TR5"],"Littelfuse 372",962],
+ ["ab","plc","1756-OB8","Allen-Bradley","Módulo de salidas digitales ControlLogix",["8 salidas","24 V CC"],"",4],
+ ["ab","plc","1746-OA16","Allen-Bradley","Módulo de salidas CA SLC 500",["16 salidas","120 V CA"],"",10],
+ ["ab","plc","1756-CNB","Allen-Bradley","Módulo de comunicación ControlNet",["ControlLogix"],"",3],
+ ["ab","hmi","2711P-RN6","Allen-Bradley","Módulo lógico PanelView Plus",["HMI"],"",1],
+ ["ab","switch","802T-W1","Allen-Bradley","Interruptor de límite (limit switch) de palanca",["NEMA 4"],"",70],
+ ["ab","switch","802T-H1W2","Allen-Bradley","Interruptor de límite uso pesado",["NEMA 4"],"",30],
+ ["ab","switch","836-C7J","Allen-Bradley","Presostato (switch de presión)",["Ajustable"],"",7],
+ ["ab","contactor","509-BOD","Allen-Bradley","Contactor NEMA tamaño 1",["NEMA 1","3 polos"],"",7],
+ ["ab","contactor","1492-F1","Allen-Bradley","Bornera para riel DIN",["Riel DIN"],"",100],
+ ["control","heater","FH-11","Cutler-Hammer","Elemento térmico (heater) para arrancador",["Térmico"],"",66],
+ ["control","heater","N-28","Allen-Bradley","Elemento térmico (heater) para arrancador",["Térmico"],"",28],
+ ["control","heater","W #27","Westinghouse","Térmico para arrancador",["Térmico"],"",183],
+ ["control","bombillo","B3075","—","Bombillo piloto BA9S 10×28",["60 V","3 W","BA9S"],"",234],
+ ["control","bombillo","B5344","—","Bombillo piloto BA15D 16×54",["130 V","5 W","BA15D"],"",134],
+ ["otros","terminal","Anillo 16-14 5/16","—","Terminal tipo anillo aislado azul",["AWG 16-14","5/16\""],"",924],
+ ["otros","terminal","Tope tubular 22-18","—","Conector tope tubular aislado rojo",["AWG 22-18"],"",1166],
+ ["otros","medidor","2805","Kyoritsu","Pinza amperimétrica",["AC/DC"],"",6],
+ ["otros","medidor","3007A","Kyoritsu","Megóhmetro digital (megger)",["250–1000 V"],"",1]
+];
+
+const IMGS={"A50P1200": 1, "FE35": 1, "ATDR": 1, "LPCC": 1, "JLLS25": 1, "AB836": 1, "L25S": 1, "AB1492": 1, "KY2805": 1, "ABC": 1, "A4BY": 1, "AJT": 1, "FWP": 1, "CNL": 1, "TRSR": 1, "CEF": 1, "A70P": 1, "GSE": 1, "AB1756OB8": 1, "AB509": 1, "JDL": 1, "OT100": 1, "FH": 1, "BA15D": 1, "170M": 1, "KY3007": 1, "KTK": 1, "3GA": 1, "AGC": 1, "TRR": 1, "TR5": 1, "BUTT": 1, "MEN": 1, "KOS": 1, "FLSR": 1, "AB2711": 1, "BA9S": 1, "JJLS": 1, "ECNR": 1, "A50P": 1, "RING": 1, "AB1746": 1, "FRSR": 1, "3NE": 1, "NOS": 1, "TAS": 1, "A60X": 1, "A70QS": 1, "AB802H": 1, "AB802W1": 1, "MDL": 1, "SILIZED": 1, "CCMR": 1, "LPJ": 1, "OT45": 1, "KRPC": 1, "DIAZED": 1, "NEOZED": 1, "MDA": 1, "EDCC": 1, "ATQR": 1, "LLNRK": 1, "ABN": 1, "ACK": 1, "KAB": 1, "G5X20": 1, "AB1756CNB": 1, "ATM": 1, "FNM": 1, "NH0": 1, "XRNT": 1, "ATMR": 1};
+const PHOTO={"A50P1200-4": "A50P1200", "35FE": "FE35", "40FE": "FE35", "JLLS20": "JJLS", "JLLS25": "JLLS25", "TRS10R ": "TRSR", "TRS35R": "TRSR", "ATDR4": "ATDR", "LP-CC-12": "LPCC", "CCMR 7-1/2": "CCMR", "CCMR20": "CCMR", "CCMR12": "CCMR", "CCMR15": "CCMR","LPJ-5SP": "LPJ", "JDL 5": "JDL", "AJT40": "AJT", "TRS30R": "TRSR", "TRS20R": "TRSR", "TRS10R": "TRSR", "FRS-R-30": "FRSR", "FLSR50": "FLSR", "ECNR30": "ECNR", "LLNRK1": "LLNRK", "TR100R": "TRR", "CCMR-20": "CCMR", "CCMR-15": "CCMR", "EDCC-1": "EDCC", "JJLS-20": "JJLS", "ATM15": "ATM", "ATM20": "ATM", "ATMR1": "ATMR", "KTK15": "KTK", "FNM 4/10": "FNM", "MEN2": "MEN", "ATQR-6/10": "ATQR", "OT45": "OT45", "A70QS500-4": "A70QS", "A70P200-4": "A70P", "A60X100-4": "A60X", "FWP100": "FWP", "L25S40": "L25S", "KAB175": "KAB", "A50P125-4": "A50P", "170M5811": "170M", "3NE4337-6": "3NE", "OT100": "OT100", "NOS80": "NOS", "KOS35": "KOS", "CNL-400": "CNL", "ACK-200": "ACK", "KRP-C 800": "KRPC", "A4BY800": "A4BY", "TAS5": "TAS", "XRNT-1 100A": "XRNT", "CEF 100A": "CEF", "3GA2 417": "3GA", "HRC-0 16A": "NH0", "GSE175": "GSE", "DZ-E27 20A": "DIAZED", "DZ-E33 50A": "DIAZED", "NEOZED D02 63A": "NEOZED", "SILIZED 63A": "SILIZED", "AGC 20": "AGC", "AGC 1.6/10": "AGC", "MDL 1-1/2": "MDL", "5×20 6,3 A": "G5X20", "ABC 5": "ABC", "MDA 30": "MDA", "Bi-pin T4A": "TR5", "1756-OB8": "AB1756OB8", "1746-OA16": "AB1746", "1756-CNB": "AB1756CNB", "2711P-RN6": "AB2711", "802T-W1": "AB802W1", "802T-H1W2": "AB802H", "836-C7J": "AB836", "509-BOD": "AB509", "1492-F1": "AB1492", "FH-11": "FH", "N-28": "ABN", "B3075": "BA9S", "B5344": "BA15D", "Anillo 16-14 5/16": "RING", "Tope tubular 22-18": "BUTT", "2805": "KY2805", "3007A": "KY3007"};
+let cat="all", query="", shown=12;
+const fEl=document.getElementById("filters");
+fEl.innerHTML=CATS.map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${k==="all"}">${l}</button>`).join("");
+fEl.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cat=b.dataset.k;shown=12;fEl.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));render();});
+document.getElementById("q").addEventListener("input",e=>{query=e.target.value.trim();shown=12;render();});
+document.getElementById("moreBtn").addEventListener("click",()=>{shown+=12;render();});
+
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[\s\-\/·.,]/g,"");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+const list=new Map(); // pn -> {p, qty}
+
+function card(p,i){
+  const [c,art,pn,brand,desc,specs,eq,qty]=p;
+  const low=qty<20, on=list.has(pn);
+  const msg=`Hola Suprinval, quiero cotizar: ${pn} (${brand!=="—"?brand+", ":""}${desc}, ${specs.join(" · ")}). Cantidad: `;
+  return `<article class="card">
+    ${(()=>{const k=PHOTO[pn];return k&&IMGS[k]?`<div class="pic photo"><img src="img/productos/${k}.jpg" alt="${esc(pn)} ${esc(brand)}" loading="lazy" width="260" height="260">`:`<div class="pic">${ART[art]||""}`})()}${p[8]?`<span class="avail hot">Más pedido</span>`:`<span class="avail${low?" low":""}">${low?"Pocas unidades":"En stock"}</span>`}</div>
+    <div class="body">
+      <span class="brandname">${esc(brand)}</span>
+      <span class="pn">${esc(pn)}</span>
+      <p class="desc">${esc(desc)}</p>
+      <div class="specrow">${specs.map(s=>`<span>${esc(s)}</span>`).join("")}</div>
+      ${eq?`<div class="equiv">Equivale a: <b>${esc(eq)}</b></div>`:""}
+      <div class="acts">
+        <a class="btn btn-wa btn-sm" href="${waLink(msg)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar</a>
+        <button type="button" class="addbtn${on?" on":""}" data-i="${i}" aria-pressed="${on}">${on?"✓ En lista":"+ Lista"}</button>
+      </div>
+    </div></article>`;
+}
+
+function render(){
+  const q=norm(query);
+  const res=P.map((p,i)=>[p,i]).filter(([p])=>(cat==="all"||p[0]===cat||(cat==="top"&&p[8]))&&(!q||norm(p.slice(2,7).flat().join(" ")).includes(q)));
+  const g=document.getElementById("grid");
+  if(!res.length){
+    g.innerHTML=`<div class="empty"><p class="eyebrow">Sin resultados en inventario</p><h3>No lo tenemos en anaquel, pero lo traemos</h3><p class="lede">Cotizamos “${esc(query)}” bajo pedido con plazo de importación.</p><a class="btn btn-wa" href="${waLink("Hola Suprinval, no encontré en el catálogo: "+query+". ¿Me lo pueden cotizar bajo pedido?")}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar bajo pedido</a></div>`;
+  } else g.innerHTML=res.slice(0,shown).map(([p,i])=>card(p,i)).join("");
+  document.getElementById("moreBtn").hidden=res.length<=shown;
+  document.getElementById("count").textContent=res.length?`Mostrando ${Math.min(shown,res.length)} de ${res.length} productos destacados del inventario. ¿No ves tu referencia? Escríbenos: tenemos más en almacén.`:"";
+}
+document.getElementById("grid").addEventListener("click",e=>{
+  const b=e.target.closest(".addbtn"); if(!b)return;
+  const p=P[+b.dataset.i];
+  if(list.has(p[2])){list.delete(p[2]);} else {list.set(p[2],{p,qty:1});toast(p[2]+" agregado a la lista");}
+  render(); renderList();
+});
+
+/* ---------- Lista de cotización ---------- */
+const drawer=document.getElementById("drawer");
+function listText(){
+  const emp=document.getElementById("l-emp").value.trim();
+  let t="Hola Suprinval, quiero cotizar la siguiente lista"+(emp?` para ${emp}`:"")+":\n";
+  [...list.values()].forEach(({p,qty},k)=>{t+=`\n${k+1}. ${p[2]} — ${p[3]!=="—"?p[3]+", ":""}${p[5].join(" · ")} — Cant: ${qty}`;});
+  return t;
+}
+function renderList(){
+  const n=list.size;
+  document.getElementById("badge").textContent=n;
+  document.getElementById("listBtn").hidden=n===0;
+  const it=document.getElementById("items");
+  it.innerHTML=n?[...list.values()].map(({p,qty})=>`<div class="it"><div><span class="pn">${esc(p[2])}</span><small>${esc(p[3])} · ${esc(p[5].join(" · "))}</small></div>
+    <div class="qty"><button type="button" data-d="-1" data-pn="${esc(p[2])}" aria-label="Menos">−</button><input id="qty-${esc(norm(p[2]))}" value="${qty}" inputmode="numeric" data-pn="${esc(p[2])}" aria-label="Cantidad de ${esc(p[2])}"><button type="button" data-d="1" data-pn="${esc(p[2])}" aria-label="Más">+</button></div>
+    <button type="button" class="linkbtn rm" data-rm="${esc(p[2])}">Quitar</button></div>`).join(""):`<p class="note">Tu lista está vacía. Agrega productos desde el catálogo.</p>`;
+  document.getElementById("sendList").href=waLink(listText());
+}
+document.getElementById("items").addEventListener("click",e=>{
+  const d=e.target.closest("[data-d]"), r=e.target.closest("[data-rm]");
+  if(d){const o=list.get(d.dataset.pn);o.qty=Math.max(1,o.qty+ +d.dataset.d);renderList();}
+  if(r){list.delete(r.dataset.rm);renderList();render();if(!list.size)closeDrawer();}
+});
+document.getElementById("items").addEventListener("change",e=>{const o=list.get(e.target.dataset.pn);if(o){o.qty=Math.max(1,parseInt(e.target.value)||1);renderList();}});
+document.getElementById("l-emp").addEventListener("input",()=>document.getElementById("sendList").href=waLink(listText()));
+document.getElementById("listBtn").addEventListener("click",()=>{drawer.hidden=false;document.getElementById("closeD").focus();});
+function closeDrawer(){drawer.hidden=true;}
+document.getElementById("closeD").addEventListener("click",closeDrawer);
+drawer.addEventListener("click",e=>{if(e.target===drawer)closeDrawer();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!drawer.hidden)closeDrawer();});
+
+function copy(text,okMsg){
+  const done=()=>toast(okMsg);
+  try{navigator.clipboard.writeText(text).then(done,()=>fallback());}catch(_){fallback();}
+  function fallback(){const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done();}catch(_){toast("Selecciona y copia el texto manualmente");}ta.remove();}
+}
+document.getElementById("copyList").addEventListener("click",()=>copy(listText(),"Lista copiada"));
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>copy(b.dataset.copy,"Número copiado")));
+let tt; function toast(m){const t=document.getElementById("toast");t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,2200);}
+
+/* ---------- Líneas bajo pedido ---------- */
+const LINES=[
+  ["A prueba de explosión","Cajas, sellos, conduletas, luminarias y estaciones de control para áreas clasificadas Clase I Div. 1 y 2.","Appleton · Crouse-Hinds · Killark",`<path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13 7-4 6h3l-1 4 4-6h-3l1-4Z" fill="currentColor"/>`],
+  ["Sensores e instrumentación","Transmisores de presión, temperatura y nivel; sensores inductivos, fotoeléctricos y de proximidad.","Emerson · Rosemount · Sick · Banner",`<circle cx="12" cy="13" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 13 16 9M12 3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`],
+  ["Fusibles de cualquier clase","Si no está en nuestro inventario, lo conseguimos: clases J, L, RK1, CC, T, semiconductores, NH y media tensión.","Bussmann · Littelfuse · Mersen",`<rect x="3" y="9" width="18" height="6" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 12h10" stroke="currentColor" stroke-width="2"/>`],
+  ["Automatización y control","PLC, variadores, HMI, módulos de E/S, contactores y repuestos de líneas vigentes y descontinuadas.","Allen-Bradley · Siemens · Schneider",`<rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="2"/>`]
+];
+document.getElementById("lines").innerHTML=LINES.map(([t,d,m,ic])=>`<article class="line"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true">${ic}</svg></div><h3>${t}</h3><p>${d}</p><span class="mk">${m}</span><button type="button" class="linkbtn" data-line="${t}">Cotizar esta línea →</button></article>`).join("");
+document.getElementById("lines").addEventListener("click",e=>{
+  const b=e.target.closest("[data-line]"); if(!b)return;
+  const sel=document.getElementById("f-line"); const map={"A prueba de explosión":1,"Sensores e instrumentación":2,"Fusibles de cualquier clase":0,"Automatización y control":3};
+  sel.selectedIndex=map[b.dataset.line]; document.getElementById("rfq").scrollIntoView({block:"center"}); document.getElementById("f-pn").focus({preventScroll:true});
+});
+
+document.getElementById("rfq").addEventListener("submit",e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const err=document.getElementById("f-err");
+  if(!v("f-pn")){err.hidden=false;document.getElementById("f-pn").focus();return;}
+  err.hidden=true;
+  const t=`Hola Suprinval, solicito cotización bajo pedido:
+• Empresa: ${v("f-emp")||"-"}
+• Contacto: ${v("f-con")||"-"}
+• Línea: ${v("f-line")}
+• Marca: ${v("f-brand")||"Indiferente / equivalente"}
+• Material: ${v("f-pn")}
+• Cantidad: ${v("f-qty")||"-"}
+• Para: ${v("f-when")}
+• Entrega en: ${v("f-site")||"-"}`;
+  const a=document.createElement("a");a.href=waLink(t);a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();
+  toast("Abriendo WhatsApp con tu solicitud");
+});
+
+/* ---------- Sectores (fotos reales pendientes) ---------- */
+const IND=[
+  ["Petróleo y gas","Refinerías, mejoradores y estaciones de flujo. Material para áreas clasificadas.","img/fotos/petroleo-gas.jpg","Refinería iluminada de noche"],
+  ["Plantas de producción","Alimentos, bebidas, papel, plásticos. Repuestos para no detener la línea.","img/fotos/plantas-produccion.jpg","Línea de producción con brazos robóticos"],
+  ["Generación y distribución","Subestaciones, tableros de media tensión y cortacircuitos de distribución.","img/fotos/generacion-distribucion.jpg","Transformador de potencia en subestación"],
+  ["Mantenimiento industrial","Contratistas y equipos de mantenimiento que necesitan respuesta el mismo día.","img/fotos/mantenimiento.jpg","Técnico trabajando en un tablero eléctrico"]
+];
+document.getElementById("inds").innerHTML=IND.map(([t,d,img,alt])=>`<article class="ind"><div class="photo shot"><img src="${img}" alt="${alt}" loading="lazy" width="800" height="1000"></div><h3>${t}</h3><p>${d}</p></article>`).join("");
+
+render(); renderList();
+</script>
+
+</body>
+</html>
