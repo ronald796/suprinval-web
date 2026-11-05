@@ -243,6 +243,80 @@ form.rfqf .btn{grid-column:1/-1;justify-self:start}
 .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,30,31,0) 60%,rgba(4,30,31,.35));pointer-events:none}
 .shot .cap{position:absolute;left:16px;right:16px;bottom:14px;z-index:1;font-family:var(--f-display);font-weight:700;font-size:1.5rem;line-height:1.05;color:#fff;text-transform:uppercase;letter-spacing:.02em;text-shadow:0 2px 12px rgba(0,0,0,.4)}
 @media (prefers-reduced-motion:reduce){.shot img{transition:none}.ind:hover .shot img{transform:none}}
+
+/* Asistente de fusibles */
+.tool{background:linear-gradient(180deg,var(--bg),var(--tint))}
+.tool-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);background:var(--bg)}
+.tabs button{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 12px;border:0;background:transparent;font:600 .95rem var(--f-body);color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;min-width:0;text-align:left}
+.tabs button[aria-selected="true"]{color:var(--ink);background:var(--surface);border-bottom-color:var(--leaf)}
+.tabs .tn{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font:600 .78rem var(--f-mono);background:var(--tint);color:var(--teal)}
+.tabs button[aria-selected="true"] .tn{background:var(--ink);color:#7FD9B3}
+@media (max-width:640px){.tabs{grid-template-columns:1fr}.tabs button{justify-content:flex-start;border-bottom-width:1px;border-left:3px solid transparent}.tabs button[aria-selected="true"]{border-left-color:var(--leaf);border-bottom-color:var(--line)}}
+.panel-t{padding:24px}
+.tool-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:start}
+@media (max-width:860px){.tool-grid{grid-template-columns:1fr}}
+.tool-in{display:grid;gap:14px;min-width:0}
+.tl{font-weight:600;color:var(--ink);font-size:.92rem}
+.bigin input{width:100%;font:600 1.35rem var(--f-mono);letter-spacing:.02em;padding:.7em .8em;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);text-transform:uppercase}
+.bigin input:focus{outline:none;border-color:var(--teal);background:var(--surface)}
+.bigin input::placeholder{text-transform:none;font:400 1rem var(--f-body);color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.82rem;color:var(--muted)}
+.chips button{font:500 .8rem var(--f-mono);border:1px solid var(--line);background:var(--bg);color:var(--teal);border-radius:999px;padding:.35em .75em;cursor:pointer}
+.chips button:hover{border-color:var(--teal)}
+.hint{margin:0;font-size:.82rem;color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg label{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:8px;padding:.55em .8em;font-size:.88rem;cursor:pointer;background:var(--bg)}
+.seg label:has(input:checked){border-color:var(--teal);background:var(--leaf-soft);color:var(--ink);font-weight:600}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.row2{grid-template-columns:1fr}}
+.unit{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:8px;background:var(--surface)}
+.unit input{border:0!important;flex:1;min-width:0}
+.unit span{padding:0 .8em;font:600 .9rem var(--f-mono);color:var(--muted)}
+.unit:focus-within{border-color:var(--teal)}
+.tool-out{min-width:0}
+.res{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg)}
+.res-head{padding:16px 18px;background:var(--ink);color:#fff;display:grid;gap:4px}
+.res-head .k{font:600 .7rem var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:#7FD9B3}
+.res-head .v{font-family:var(--f-display);font-size:1.7rem;font-weight:700;line-height:1.05}
+.res-head .s{font-size:.85rem;color:#B9D6CF}
+.res-body{padding:16px 18px;display:grid;gap:14px}
+.eqtable{width:100%;border-collapse:collapse;font-size:.9rem}
+.eqtable td{padding:9px 6px;border-bottom:1px dashed var(--line);vertical-align:middle}
+.eqtable tr:last-child td{border-bottom:0}
+.eqtable td:first-child{color:var(--muted);font-size:.8rem;width:42%}
+.eqtable .pn{font:600 1rem var(--f-mono);color:var(--ink)}
+.eqtable tr.me .pn::after{content:"tu referencia";margin-left:8px;font:500 .66rem var(--f-body);text-transform:uppercase;letter-spacing:.08em;background:var(--tint);color:var(--teal);padding:.2em .5em;border-radius:4px;vertical-align:middle}
+.stock{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:10px;font-size:.9rem}
+.stock.yes{background:var(--leaf-soft);color:var(--ink)}
+.stock.no{background:var(--warn-soft);color:var(--fg)}
+.stock b{display:block}
+.stock .dot{flex:none;width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--leaf)}
+.stock.no .dot{background:var(--warn)}
+.res-acts{display:flex;flex-wrap:wrap;gap:8px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+.kpi .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.kpi .n{font:600 1.35rem var(--f-mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.kpi.main{border-color:var(--leaf);background:var(--leaf-soft)}
+@media (max-width:480px){.kpis{grid-template-columns:1fr 1fr}.kpi.main{grid-column:1/-1}}
+.opts{display:grid;gap:8px}
+.opt{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.opt b{color:var(--ink);font-size:.92rem}
+.opt small{grid-column:1;color:var(--muted);font-size:.8rem}
+.opt .codes{grid-row:1/3;grid-column:2;font:600 .82rem var(--f-mono);color:var(--teal);text-align:right}
+.empty-t{border:1.5px dashed var(--line);border-radius:12px;padding:22px;display:grid;gap:8px;color:var(--muted);font-size:.92rem;background:var(--bg)}
+.empty-t b{color:var(--ink);font-family:var(--f-display);font-size:1.35rem}
+.shapes{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.shape{border:1.5px solid var(--line);border-radius:12px;background:var(--bg);padding:12px;display:grid;gap:6px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.shape:hover,.shape[aria-pressed="true"]{border-color:var(--teal);background:var(--surface)}
+.shape[aria-pressed="true"]{box-shadow:0 0 0 3px color-mix(in srgb,var(--leaf) 30%,transparent)}
+.shape svg{height:56px;width:100%}
+.shape b{font-size:.9rem;color:var(--ink)}
+.shape span{font:500 .74rem var(--f-mono);color:var(--muted)}
+.disc{margin:14px 0 0;font-size:.8rem;color:var(--muted);max-width:none}
+.disc a{color:var(--teal)}
+
 /* Contact / footer */
 .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
 .cbox{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;gap:18px;min-width:0}
@@ -300,6 +374,7 @@ footer img{height:34px;width:auto}
     </a>
     <nav class="main" aria-label="Principal">
       <a href="#catalogo">Catálogo</a>
+      <a href="#asistente">Asistente</a>
       <a href="#pedido">Bajo pedido</a>
       <a href="#asesoria">Asesoría</a>
       <a href="#contacto">Contacto</a>
@@ -324,7 +399,7 @@ footer img{height:34px;width:auto}
       <p class="lede">Más de 1.500 referencias en inventario, de baja a media tensión. Y lo que no está en el anaquel, lo importamos y te lo llevamos a sitio.</p>
       <div class="hero-ctas">
         <a class="btn btn-wa" data-wa="Hola Suprinval, necesito cotizar un material." href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
-        <a class="btn btn-ghost" href="#pedido">Pedido a la medida</a>
+        <a class="btn btn-ghost" href="#asistente">¿Qué fusible necesito?</a>
       </div>
       <div class="specs">
         <div><b>+1.500</b><span>referencias en stock</span></div>
@@ -369,6 +444,86 @@ footer img{height:34px;width:auto}
     </div>
     <div class="grid" id="grid"></div>
     <div class="more"><button class="btn btn-ghost" id="moreBtn" style="color:var(--ink)">Mostrar más productos</button></div>
+  </div>
+</section>
+
+<section class="block tool" id="asistente">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Asistente de fusibles</p>
+        <h2>¿Qué fusible necesitas? Te lo decimos en 30 segundos</h2>
+        <p class="lede">Escribe la referencia que tienes, calcula la protección de tu motor o identifica el fusible por sus medidas. Te mostramos el equivalente en otras marcas y si lo tenemos en almacén.</p>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <div class="tabs" role="tablist" aria-label="Modo del asistente">
+        <button role="tab" id="t-eq" aria-selected="true" aria-controls="p-eq" type="button"><span class="tn">1</span>Busco un equivalente</button>
+        <button role="tab" id="t-mo" aria-selected="false" aria-controls="p-mo" type="button"><span class="tn">2</span>Protejo un motor</button>
+        <button role="tab" id="t-id" aria-selected="false" aria-controls="p-id" type="button"><span class="tn">3</span>No sé qué fusible es</button>
+      </div>
+
+      <!-- 1. Equivalencias -->
+      <div class="panel-t" role="tabpanel" id="p-eq" aria-labelledby="t-eq">
+        <div class="tool-grid">
+          <div class="tool-in">
+            <label class="tl" for="eq-q">Escribe la referencia impresa en tu fusible</label>
+            <div class="bigin">
+              <input id="eq-q" type="text" autocomplete="off" spellcheck="false" placeholder="Ej. LPJ-30SP, KTK-15, FRS-R-60, CCMR 20">
+            </div>
+            <div class="chips" id="eq-ex" aria-label="Ejemplos">
+              <span>Prueba:</span>
+              <button type="button">LPJ-30SP</button><button type="button">FRS-R-30</button><button type="button">KTK-R-10</button><button type="button">JJS-60</button><button type="button">FWP-100A</button><button type="button">AGC 20</button>
+            </div>
+            <p class="hint">Cruzamos referencias de Bussmann (Eaton), Mersen (Ferraz Shawmut / Gould), Littelfuse y Edison, las cuatro marcas principales de fusibles norteamericanos.</p>
+          </div>
+          <div class="tool-out" id="eq-out" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- 2. Motor -->
+      <div class="panel-t" role="tabpanel" id="p-mo" aria-labelledby="t-mo" hidden>
+        <div class="tool-grid">
+          <div class="tool-in">
+            <div class="seg" role="radiogroup" aria-label="Dato del motor">
+              <label><input type="radio" name="mo-mode" value="fla" id="mo-m-fla" checked> Corriente de placa (A)</label>
+              <label><input type="radio" name="mo-mode" value="hp" id="mo-m-hp"> Potencia (HP o kW)</label>
+            </div>
+            <div class="row2" id="mo-fla-row">
+              <div class="fld"><label for="mo-fla">Corriente nominal (FLA) en la placa</label><div class="unit"><input id="mo-fla" type="number" inputmode="decimal" min="0.1" step="0.1" value="22"><span>A</span></div></div>
+            </div>
+            <div class="row2" id="mo-hp-row" hidden>
+              <div class="fld"><label for="mo-p">Potencia</label><input id="mo-p" type="number" inputmode="decimal" min="0.1" step="0.1" value="15"></div>
+              <div class="fld"><label for="mo-pu">Unidad</label><select id="mo-pu"><option value="hp">HP</option><option value="kw">kW</option></select></div>
+            </div>
+            <div class="row2">
+              <div class="fld"><label for="mo-v">Tensión</label>
+                <select id="mo-v">
+                  <option value="208-3">208 V trifásico</option>
+                  <option value="230-3">220–240 V trifásico</option>
+                  <option value="460-3" selected>440–480 V trifásico</option>
+                  <option value="575-3">575–600 V trifásico</option>
+                  <option value="115-1">115–120 V monofásico</option>
+                  <option value="230-1">220–240 V monofásico</option>
+                </select></div>
+              <div class="fld"><label for="mo-ol">¿Tiene relé térmico (guardamotor)?</label>
+                <select id="mo-ol"><option value="si">Sí, tiene relé térmico</option><option value="no">No / no sé</option></select></div>
+            </div>
+            <p class="hint">Cálculo orientativo según NEC 430.52 y las guías de aplicación de Mersen y Bussmann para fusibles de doble elemento con retardo. Siempre verifica con tu ingeniero y la etiqueta del arrancador.</p>
+          </div>
+          <div class="tool-out" id="mo-out" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- 3. Identificar -->
+      <div class="panel-t" role="tabpanel" id="p-id" aria-labelledby="t-id" hidden>
+        <p class="tl" style="margin:0 0 12px">Mide tu fusible o compáralo con estas formas. Toca el que se parezca:</p>
+        <div class="shapes" id="shapes"></div>
+        <div class="tool-out" id="id-out" aria-live="polite" style="margin-top:16px"></div>
+      </div>
+    </div>
+    <p class="disc">El Asistente Suprinval es una guía orientativa. La selección final de la protección depende de la instalación y debe validarla un profesional. ¿Dudas? <a href="#" data-wa="Hola Suprinval, necesito asesoría para seleccionar un fusible.">Te asesoramos por WhatsApp</a>.</p>
   </div>
 </section>
 
@@ -750,6 +905,172 @@ const IND=[
 document.getElementById("inds").innerHTML=IND.map(([t,d,img,alt])=>`<article class="ind"><div class="photo shot"><img src="${img}" alt="${alt}" loading="lazy" width="800" height="1000"></div><h3>${t}</h3><p>${d}</p></article>`).join("");
 
 render(); renderList();
+
+window.INV=["0,5E  AMP","0.4A","0.5A","0.63A","1.6A","100A","100FBP 06 P/BREAK.","100FEa","110EET","125A","15A","15RBA4 15.5 KV","16 amp","160A","16CT","16LCT 16A","170L4977","170M-5811","170M1564-NH000","170M1568-NH000","170M2613","170M2667","170M3613","170M6647","170M8635","170N3231","180FM","180LETA","1E","200A","20FC","250A","250FM","25ET-25A","25LET","29500A","2A","2CLPT-5","3.15A","3.5A","300/800A","315A","35A","35FE","3A","3GA2 417 24KV","3NE4337-6       800V","4,8KV 5E","40 FE","400E","400LAP10 P/BREAK.","40A","40FE","40FE-40A","453020 15KV","500A","500MA","500MCM","50A","50FE","50FE-50A","550A","5A","5E AMP","6 AMP","6,9 grb 40A 690v","6.3A","600A","60FHS350","630A","63A","63FE","63FE-63A","660GH-125A","6HO7C 6A","70/400A","700SHB-100A","710A","75EET","800 MA","800A","800NBP20 P/BREAK.","80A","900A","90EET","A070F400","A1-66 S 125 D8","A13X/A13Z/KAA/KAH/FWA","A13X180-4","A13X200-4","A13X30-2","A13X50-4","A13X600","A13X8-2","A13X80-4","A13Z20-2","A240R-24R","A240T1/2E","A240T1E","A25X/KAB-KAX-FWX-E25S","A25X10","A25X15","A25X20","A25X225-4","A25X250-4","A25X4","A25X40-4","A25X50-4","A25X70-4","A25X700-4","A25X8","A25X80-4","A25X800-4","A25Z600-4","A25Z80-4","A30QS40-4","A3T-JJN-JLLN-TJN","A4/JFL-JKS/JLS","A480R18R-1","A480R2R-1HE","A480R6R-1HE","A480T1/2E","A480T2E","A4BQ / KRPC","A4BY1600","A4BY600","A4BY800","A4J250","A4J35","A500T5E-1","A50P/FWH/KBH/XL50F","A50P100-4","A50P1000-4","A50P1200-4","A50P125-4","A50P15-1","A50P150-4","A50P175-4","A50P200-4","A50P25-1","A50P250-4","A50P275-4","A50P40-4","A50P500-4","A50P600-4","A50P700-4","A50P80-4","A50QS125-4","A50QS20-1","A55OAYUO18FR50761","A6050X","A60C125A","A60X-E60C-E60X-KBC-E6D","A60X10-1","A60X100-4","A60X125-4","A60X150","A60X200-4","A60X30-1","A60X300","A60X35-2","A60X40","A60X400-4","A60X60-4","A60X70-4","A60X80-4","A6D25R","A6D5R","A6D8R","A6T-100","A6T-15","A6T-150","A6T-3","A6T-TJS-JSS-JLLS","A6Y15","A6Y6","A70P-400-4","A70P-FWP-E70S-A70P","A70P100-4","A70P200-4","A70P25-1","A70P25-4","A70P300-4","A70P40-4","A70P50-4","A70Q100","A70Q200-4","A70QS-100 A","A70QS100","A70QS500-4","ABC 1","ABC 1/2","ABC 10","ABC 15","ABC 16","ABC 2","ABC 20","ABC 25","ABC 3","ABC 3/4","ABC 30","ABC 5","ABC 6","ABC 8","ABC-4","ACK-100","ACK-140","ACK-200","ACK-300","AGC 1./100","AGC 1./200","AGC 1./32","AGC 1./500","AGC 1.1/4","AGC 1.6/10","AGC 1/2","AGC 10A 250V","AGC 12A 32V","AGC 15./100","AGC 15A 32V","AGC 175./100","AGC 2./10","AGC 20","AGC 25","AGC 2A","AGC 3/16","AGC 30","AGC 3A","AGC 4","AGC 45./100","AGC 4A","AGC 6./10","AGC 7.1/2","AGU-1A","AGU-2A","AGU-3A","AGV-13A","AJ415","AJ4150","AJ4200","AJ4300","AJ460","AJ480","AJ490","AJT 10","AJT 4","AJT 4-1/2","AJT 8","AJT125","AJT3","AJT30","AJT4","AJT40","ALS-500","ANL-100","ANN-40","APT100","ATDR-10","ATDR-2.1/4","ATDR-4","ATDR-7","ATDR-9","ATM1","ATM1/2","ATM10","ATM15","ATM2","ATM20","ATM25","ATM5","ATM6","ATM7","ATM8","ATMR 2 1/2","ATMR1","ATMR1/2","ATMR12","ATMR15","ATMR2","ATMR3","ATMR3/4","ATMR4","ATMR5","ATQ 1.6/10","ATQ1","ATQ1/2","ATQ10","ATQ2","ATQ2-1/2","ATQ4","ATQ5","ATQ6/10","ATQR 25","ATQR 30","ATQR-1.1/2","ATQR-1/2","ATQR-2.8/10","ATQR-3","ATQR-3/4","ATQR-5","ATQR-6/10","ATQR-8","ATS-DE225R","B1000/20A","B330028","BA063 BS8.2 63A","BAF1","BAF15","BAF30","BAF8","BAN10","BASE DOBLE P/ZR-0","BASE P/NH00 TRIPLE","BASE SENCILLA P/NH-3","BASE SENCILLA P/ZR-0","BASE SENCILLA P/ZR-1","BASE SENCILLA P/ZR-2","BASE TRIPLE /NH00","BASE TRIPLE P/NH-3","BASE TRIPLE P/NH-5","BASE TRIPLE P/ZR-0","BASE TRIPLE P/ZR-0 30312","BASE TRIPLE P/ZR-0 30313","BASE TRIPLE P/ZR-1","BBC 1","BBC 1/2","BBC 1/4","BBC 5","BBS-1","BBS-4/10","BDA 1/2","BDA 1/8","BDA 2","BDA 3","BDA 7","BDA 8/10","BDL 8A","BFH00-3AF1","BGC 1.6/10","BGC 25","BGC 3.5","BI-PIN 4A 250V","BI-PIN 5A 250V","BLS-2","CCK-50","CCMR-1","CCMR-12","CCMR-15","CCMR-20","CCMR-25","CCMR-30","CCMR-40","CCMR-7.1/2","CD 24KV","CEF 7.2KV","CGL 15","CGL-40A","CLS-1 5.08KV","CLT 30A  14,4KV","CNL-175","CNL-200","CNL-325","CNL-400","CP2/0C3","CP2/0C3  CP6 2/0 CABLE","CP500C3-EDC","CRN3.2/10","CRN61/4","CRS-R3","DD160","DD160 BS88.2","DE0125","DES100","DLN-R20","DLS-R-300","DLS-R50","DLS600","DLSR100","DLSR125","DLSR300","DLSR35","DLSR60","DMM-B 11A","DMM-B 44/100","DMM-FSM 1000V","DR15/6 17.5KV","DRVAL 3.6 KV","DSLBX 24 KV","DZ-E16","DZ-E27","DZ-E27  UR","DZ-E33","E15S80","E20FC","E20FE","E25S100","E25S40","E25S80","E50C80","E50SF-30","E6025","E60C100-4","E60C125","E60C15","E60C20","E60C30","E60C5","E60S40","E60SF15","E70S40","E70SF20","EBS-10","ECK-150","ECK-40","ECK-50","ECL-60","ECNR1","ECNR1.4","ECNR1.6","ECNR1.6/10","ECNR17.5","ECNR20","ECNR3","ECNR3.5","ECNR30","ECNR40","ECNR50","ECNR80","ECNR9","ECRS500","ECSR1","ECSR1.4/10","ECSR125","ECSR3.2","ECSR35","ECSR4","ECSR5","ECSR90","EDCC-1","EJ 0-1C  9F60    8,25KV","EJ-100 6F60GJC375 4.76KV","EJ-1C 2.27KV","EJ-2D 2.4KV","EJ0-1C 15.5KV","EJ0-1C 8.25KV","EJI 15.50KV","EJI 5.50KV","EJI 5.5KV","EJI6293011G-11","ELNE-225","ELNE-250","EOS60","F. VIDRIO 5X20 LENTO","F/CERAMICA 5X20 GDA","F/VIDRIO 5X20  GGM","F/VIDRIO 5X20 GMA","F/VIDRIO 5X20 GMC","F/VIDRIO 6 X 16 AGA","F/VIDRIO 6 X 20 AGA","F/VIDRIO 6.3X25 AGX","FA1H 4,3KV","FLA15","FLA3","FLM15","FLM2","FLM25","FLN-R30","FLNR 8","FLNR20","FLNR35","FLNR40","FLNR50","FLQ2","FLQ30","FLQ5","FLR 125 7,2KV","FLSR 5","FLSR-30","FLSR30","FLSR50","FNA1","FNA2","FNA2/10","FNM 1/10","FNM 2/10","FNM 3/4","FNM 4/10","FNM1","FNM1-8/10","FNM1/4","FNM12","FNM15","FNM2","FNM3/10","FNM6","FNM7","FNQ 3","FNQ-3 2/10","FNQ2","FNQ2 1/2","FNQ4","FNQ6","FNQ8","FNQR-4","FNQR-4.1/2","FNQR-7","FRN-7R","FRN-R1","FRN-R12","FRN-R16/10","FRN-R3","FRN-R35","FRN-R4","FRN-R70","FRN-R90","FRN1.4/10","FRN10R","FRN150","FRN15R","FRN400","FRN45","FRS 2.8/10","FRS-R 6/10","FRS-R1","FRS1","FRS100","FRS2","FRS3","FRS300","FRS35","FRS4","FRS400","FRS60","FRSR 17.1/2","FRSR 2.1/2","FRSR 3.2/10","FRSR 6.1/4","FRSR1 8/10","FRSR1.6/10","FRSR3","FRSR30","FRSR4","FRSR5","FRSR60","FRSR80","FRSR90","FSB-10","FSB-15","FSB-25","FSM-11","FSM10","FU-12A","FUSE FU-12 1000V","FUSIBLE MICRO 125V","FUSIBLE VIDRIO 6X30","FUSIBLES  T4A","FUSIBLES T5A","FWA-150","FWC16-10F","FWC2510F","FWC3210F","FWH-300A","FWH-90","FWP-1000","FWP-4","FWP-40A14Fa  AR","FWP100","FWP150","FWP25-1","FWP250","FWP300-1","FWP400","FWP50-A22F","FWP70","FWX-50","GAB 12","GDL 15A","GF-80P","GFN10","GFN3","GFN4","GFN6","GGC 1.1/2","GGC 1/4","GGC 10A 32V","GGC 25","GGC 3/10","GGC 3/4","GGC 6","GMQ 3","GMQ3-2/10","GMQ6-1/4","GRB17 40A","GSA 1","GSA 1/4","GSA 2","GSA 4","GSA10","GSA100","GSA125","GSA15","GSA20","GSA200A","GSA50","GSA75","GSD150","GSE175","GSG1000-55A","HBO-125","HCLR1.5","HCLR9","HCTR-0.5","HCTR-0.75","HHE1","HRC 100A","HRC 15","HRC 20","HRC 24KV ABFNA 3,15A","HRC CEO 80A","HRC I 16A","HRC II 40A","HRC II 60A","HRC IIC 10","HRC IIC 15","HRC M1000-150A","HRC TPC 80A","HRC-0 10A","HRC-0 16A","HRC-0 20A","HRC-0 2A","HRC-0 32A","HRC-0 3A","HRC-0 4A","HRC-0 6A","HRC-1 10A","HRC-1 2A","HRC-1 4A","HRC-1 6A","HRC-1 MI 20A","HRC-1 MI 30A","HRC-1-MI 16A","HRC-2 35A","HRC-HRCI-HRCII-HO7C","HRC1-MI 15A","HRC2-350A","HRC2-400A","HRCI-MISC 90A","HRCII-C 30A","HSC-1","HSC-10 TAM.2","HSC-4 160A","HSC-4 200A","IB-D1 24KV","IDSR30   ***john","JCK 6R","JCL-5R","JCL-9R 5.08KV","JCW-3E","JDL 1","JDL 12","JDL 5","JDL 7","JDL 8","JFL150","JFL35","JFL8","JHC-15","JJLS-20","JJLS-25","JJN-30","JJS-150","JJS-30","JKS10","JKS150","JKS2","JKS200","JKS3","JR33-120","JR33-180","JR36-200","JR66-200","KAA20-2","KAA250","KAA3-1","KAA400","KAB1","KAB100","KAB125","KAB150","KAB175","KAB225","KAB250","KAB35","KAB350","KAB40","KAB400","KAB45","KAB50","KAB60","KAB70","KAC1","KAC10","KAC100","KAC110","KAC125","KAC15","KAC20","KAC200","KAC25","KAC40","KAC5","KAC50","KAC500","KAC80","KAF800","KBH-80","KBH100","KBH350","KLDR-1/2","KLDR-3.2/10","KLDR-5","KLK15","KLK2","KLKD5","KLKR1","KLKR15","KLKR2","KLKR8","KON 80","KON1","KON2","KON25","KON4","KON40","KON7","KOS1","KOS10","KOS12","KOS2","KOS25","KOS3","KOS35","KOS4","KOS45","KOS5","KOS8","KOS80","KRP-C 800","KRP-C-1000","KRPC400","KTK15","KTK20","KTK3","KTK5","KTK6","KTK8","KTKR 30","KTKR-1.1/2","KTKR1/2","KTKR3","KTKR5","L25S40","L50S125","L50S150","L50S225","L50S600","L70S100","L70S200","L70S70","LLNRK1","LP-CC-12","LPJ 1-8/10","LPJ 15","LPJ 17.1/2","LPJ 2 1/2","LPJ 2-1/4","LPJ 2-8/10","LPJ 20","LPJ 3-1/2","LPJ 4-1/2","LPJ 5SP","LPJ 8-SP","LPJ-3SP","LPJ70SP","LPN-PK2","LPN-RK1SP","LPS-PK-175SP","M300092","MCL15","MCL3","MCL35","MCL5","MCL7","MDA 1","MDA 1.1/2","MDA 1/2","MDA 10","MDA 12","MDA 2","MDA 25","MDA 3/4","MDA 30","MDA 5","MDA 8","MDA7/10","MDL 0,75A","MDL 1.1/2A","MDL 1.1/4A","MDL 1.6/10A","MDL 1.6A","MDL 1/4A","MDL 10A","MDL 15A","MDL 1A","MDL 2,5A","MDL 20A","MDL 250 MA","MDL 25A","MDL 2A","MDL 3A","MDL 4/10","MDL 5A","MDL 6","MDL 6 1/4","MDL 6/10","MDL 7/10","MDL 750 MA","MDL 7A","MDL 8/10","MEN1.4","MEN2","MEN25","MEN4.5","MEN7","MEQ1","MEQ1.5","MEQ15","MEQ2.25","MEQ30","MEQ4","MEQ8","MID1.25","MID15","MID20","MID25","MID3","MID30","MID4","MID5","MID6","MID8","MOL1","MOL10","MOL15","MOL2","MOL25","MOL30","MOL4","MOL6","MOL9","MON15","MV055F1CAX50E","MV055F1DAX50E","NEOZED -18","NH00 160   AR","NH00160","NON150","NON30","NOS1","NOS3","NOS45","NOS450","NOS80","O45","ON400","ONE 60","OT100","OT12","OT150","OT2","OT25","OT40","OT400","OT45","OT6","OT60","OT600","OTM1","OTM15","OTM2","OTM20","OTM25","OTM3","OTM30","OTS1","OTS10","OTS12","OTS2","OTS200","OTS25","OTS3","OTS30","OTS40","OTS5","OTS6","OTS60","OTS600","OTS70","OTS8","OTS80","OTS90","P330270","PC30UD69V125A","RBA-RBD-400 15.5KV","RBA-RDB-400   15,5KV","RFL400","RGS19 CRGL-315","RLF2700","RO15T-10","RO15T-20","RS15T  u.r","RW12-27KV","SBS-10","SBS-15","SBS-5","SC-30","SEC-50","SF60X10","SLC-5","SLC-60A","T1/2A","T78976","TAS1","TAS12","TAS2","TAS20","TAS3","TAS35","TAS4","TAS45","TAS5","TAS8","TBS30","TBS35","TBS45","TBS60","TPS-60","TR1/2R","TR100R","TR12R","TR150R","TR15R","TR17.1/2R","TR171/2R","TR1R","TR2.1/4","TR2/10R","TR2R","TR3/10R","TR35R","TR3R","TR45R","TR4R","TR50R","TR5R","TR6/10R","TR61/4","TR6R","TR7R","TR80R","TRM1","TRM1-8/10","TRM10","TRM15","TRM2","TRM2-8/10","TRM2.1/2","TRM20","TRM25","TRM3","TRM3/10","TRM31/2","TRM4-1/2","TRM6","TRM7","TRM9","TRS 03R","TRS 2.1/2R","TRS 3.2/10","TRS1.1/4R","TRS1.4/10","TRS1.6/10R","TRS1/2R","TRS100R","TRS10R","TRS125R","TRS12R","TRS17.1/2","TRS2","TRS2.8/10R","TRS20R","TRS25R","TRS30R","TRS35R","TRS40R","TRS45R","TRS4R","TRS5R","TRS600","TRS60R","TRS90R","UCLC-2/0-3/0","XRNT-1 24 KV","Z300494","Z590117","Z59O122 10A","ZR-0","ZR-0  AM","ZR-0 AM","ZR-00","ZR-1","ZR-1  ULTRA RAPIDO","ZR-1 AM","ZR-2","ZR-2 AM","ZR-2 U/R","ktk15","zr1    am"];
+
+/* ================= Asistente de fusibles ================= */
+(function(){
+const BR={B:"Bussmann (Eaton)",M:"Mersen (Ferraz Shawmut)",L:"Littelfuse",E:"Edison"};
+// m: [marca, prefijos detectables, formato de salida]
+const FAM=[
+ {id:"jtd",n:"Clase J · retardo de tiempo",v:"600 V",u:"Motores y transformadores. Muy compacto, limitador de corriente.",m:[["B",["LPJ"],a=>`LPJ-${a}SP`],["M",["AJT"],a=>`AJT${a}`],["L",["JTD"],a=>`JTD ${a}`],["E",["JDL"],a=>`JDL ${a}`]]},
+ {id:"jfa",n:"Clase J · acción rápida",v:"600 V",u:"Alimentadores y cargas resistivas, sin arranque de motor.",m:[["B",["JKS"],a=>`JKS-${a}`],["M",["A4J","AJ4"],a=>`A4J${a}`],["L",["JLS"],a=>`JLS ${a}`],["E",["JFL"],a=>`JFL ${a}`]]},
+ {id:"t6",n:"Clase T · acción rápida",v:"600 V",u:"El más compacto en potencia. Variadores, alimentadores y centros de carga.",m:[["B",["JJS"],a=>`JJS-${a}`],["M",["A6T"],a=>`A6T${a}`],["L",["JLLS"],a=>`JLLS ${a}`],["E",["TJS"],a=>`TJS ${a}`]]},
+ {id:"t3",n:"Clase T · acción rápida",v:"300 V",u:"Tableros y alimentadores de 240 V.",m:[["B",["JJN"],a=>`JJN-${a}`],["M",["A3T"],a=>`A3T${a}`],["L",["JLLN"],a=>`JLLN ${a}`],["E",["TJN"],a=>`TJN ${a}`]]},
+ {id:"rk5h",n:"Clase RK5 · doble elemento",v:"600 V",u:"El fusible de motor más usado en tableros industriales.",m:[["B",["FRSR","FRS","DLSR"],a=>`FRS-R-${a}`],["M",["TRSR","TRS"],a=>`TRS${a}R`],["L",["FLSR"],a=>`FLSR ${a}`],["E",["ECSR"],a=>`ECSR ${a}`]]},
+ {id:"rk5l",n:"Clase RK5 · doble elemento",v:"250 V",u:"Motores y circuitos de 240 V.",m:[["B",["FRNR","FRN","DLNR"],a=>`FRN-R-${a}`],["M",["TRR","TR"],a=>`TR${a}R`],["L",["FLNR"],a=>`FLNR ${a}`],["E",["ECNR"],a=>`ECNR ${a}`]]},
+ {id:"rk1h",n:"Clase RK1 · doble elemento, limitador",v:"600 V",u:"Mayor limitación de corriente que el RK5, mismo portafusible.",m:[["B",["LPSRK","LPS"],a=>`LPS-RK-${a}SP`],["M",["A6DR","A6D"],a=>`A6D${a}R`],["L",["LLSRK"],a=>`LLSRK ${a}`],["E",["LESR"],a=>`LESR ${a}`]]},
+ {id:"rk1l",n:"Clase RK1 · doble elemento, limitador",v:"250 V",u:"Mayor limitación de corriente en 240 V.",m:[["B",["LPNRK","LPN"],a=>`LPN-RK-${a}SP`],["M",["A2DR","A2D"],a=>`A2D${a}R`],["L",["LLNRK"],a=>`LLNRK ${a}`],["E",["LENR"],a=>`LENR ${a}`]]},
+ {id:"cct",n:"Clase CC · retardo (motores)",v:"600 V",u:"Protección de motores pequeños en espacio reducido (10×38 mm, con ranura).",m:[["B",["LPCC"],a=>`LP-CC-${a}`],["M",["ATDR"],a=>`ATDR${a}`],["L",["CCMR"],a=>`CCMR ${a}`],["E",["EDCC"],a=>`EDCC ${a}`]]},
+ {id:"ccx",n:"Clase CC · retardo (transformadores de control)",v:"600 V",u:"Primarios de transformadores de control y solenoides.",m:[["B",["FNQR"],a=>`FNQ-R-${a}`],["M",["ATQR"],a=>`ATQR${a}`],["L",["KLDR"],a=>`KLDR ${a}`],["E",["HCTR"],a=>`HCTR ${a}`]]},
+ {id:"ccf",n:"Clase CC · acción rápida",v:"600 V",u:"Circuitos de control y cargas sin picos de arranque.",m:[["B",["KTKR"],a=>`KTK-R-${a}`],["M",["ATMR"],a=>`ATMR${a}`],["L",["KLKR"],a=>`KLKR ${a}`],["E",["HCLR"],a=>`HCLR ${a}`]]},
+ {id:"mfa",n:"Midget 10×38 · acción rápida",v:"600 V",u:"Circuitos de control, iluminación e instrumentación.",m:[["B",["KTK"],a=>`KTK-${a}`],["M",["ATM"],a=>`ATM${a}`],["L",["KLK"],a=>`KLK ${a}`],["E",["MCL"],a=>`MCL ${a}`]]},
+ {id:"mtd",n:"Midget 10×38 · retardo de tiempo",v:"250 V",u:"Transformadores de control, balastos y pequeños motores.",m:[["B",["FNM"],a=>`FNM-${a}`],["M",["TRM"],a=>`TRM${a}`],["L",["FLM"],a=>`FLM ${a}`],["E",["MEN"],a=>`MEN ${a}`]]},
+ {id:"mtd5",n:"Midget 10×38 · retardo de tiempo",v:"500 V",u:"Transformadores de control y circuitos inductivos.",m:[["B",["FNQ"],a=>`FNQ-${a}`],["M",["ATQ"],a=>`ATQ${a}`],["L",["FLQ"],a=>`FLQ ${a}`],["E",["MEQ"],a=>`MEQ ${a}`]]},
+ {id:"mgp",n:"Midget 10×38 · uso general",v:"250 V",u:"Uso general, iluminación y control.",m:[["B",["BAF","BAN"],a=>`BAF-${a}`],["M",["OTM"],a=>`OTM${a}`],["L",["BLF"],a=>`BLF ${a}`],["E",["MOL"],a=>`MOL ${a}`]]},
+ {id:"k5l",n:"Clase K5 · un solo uso",v:"250 V",u:"Reemplazo de fusibles de cartucho tradicionales.",m:[["B",["NON"],a=>`NON-${a}`],["M",["OT"],a=>`OT${a}`],["L",["NLN"],a=>`NLN ${a}`],["E",["KON"],a=>`KON ${a}`]]},
+ {id:"k5h",n:"Clase K5 · un solo uso",v:"600 V",u:"Reemplazo de fusibles de cartucho tradicionales.",m:[["B",["NOS"],a=>`NOS-${a}`],["M",["OTS"],a=>`OTS${a}`],["L",["NLS"],a=>`NLS ${a}`],["E",["KOS"],a=>`KOS ${a}`]]},
+ {id:"s70",n:"Ultrarrápido semiconductores",v:"700 V",u:"Variadores, rectificadores y arrancadores suaves.",m:[["B",["FWP"],a=>`FWP-${a}A`],["M",["A70QS","A70P","A70Q"],a=>`A70QS${a}-4`],["L",["L70S"],a=>`L70S ${a}`],["E",["E70S"],a=>`E70S ${a}`]]},
+ {id:"s50",n:"Ultrarrápido semiconductores",v:"500 V",u:"Variadores y rectificadores de 480 V.",m:[["B",["FWH"],a=>`FWH-${a}B`],["M",["A50QS","A50P"],a=>`A50P${a}-4`],["L",["L50S"],a=>`L50S ${a}`],["E",["E50S","KBH"],a=>`E50S ${a}`]]},
+ {id:"s60",n:"Ultrarrápido semiconductores",v:"600 V",u:"Equipos de potencia de 600 V.",m:[["B",["KAC"],a=>`KAC-${a}`],["M",["A60X","A60Q"],a=>`A60X${a}-4`],["L",["L60S"],a=>`L60S ${a}`],["E",["E60C","E60S"],a=>`E60C ${a}`]]},
+ {id:"s25",n:"Ultrarrápido semiconductores",v:"250 V",u:"Cargadores, UPS y electrónica de 240 V.",m:[["B",["FWX","KAB"],a=>`FWX-${a}A`],["M",["A25X","A25Z"],a=>`A25X${a}-4`],["L",["L25S"],a=>`L25S ${a}`],["E",["E25S"],a=>`E25S ${a}`]]},
+ {id:"s13",n:"Ultrarrápido semiconductores",v:"130 V",u:"Electrónica de potencia y CC de baja tensión.",m:[["B",["FWA","KAA"],a=>`FWA-${a}A`],["M",["A13X","A13Z"],a=>`A13X${a}-2`],["L",["L15S"],a=>`L15S ${a}`],["E",["E15S"],a=>`E15S ${a}`]]},
+ {id:"cl",n:"Clase L · retardo",v:"600 V",u:"Acometidas y alimentadores grandes, 601 a 6000 A.",m:[["B",["KRPC","KTU"],a=>`KRP-C-${a}SP`],["M",["A4BY","A4BQ"],a=>`A4BY${a}`],["L",["KLPC"],a=>`KLPC ${a}`],["E",["LCL"],a=>`LCL ${a}`]]},
+ {id:"agc",n:"Vidrio 6,3×32 mm · acción rápida",v:"250 V",u:"Equipos electrónicos, instrumentos y tarjetas.",m:[["B",["AGC"],a=>`AGC-${a}`],["M",["GGC"],a=>`GGC${a}`],["L",["312"],a=>`312 ${a}`,1],["E",["BGC"],a=>`BGC ${a}`]]},
+ {id:"mdl",n:"Vidrio 6,3×32 mm · retardo",v:"250 V",u:"Fuentes, motores pequeños y transformadores electrónicos.",m:[["B",["MDL"],a=>`MDL-${a}`],["M",["GDL"],a=>`GDL${a}`],["L",["313"],a=>`313 ${a}`,1],["E",["BDL"],a=>`BDL ${a}`]]},
+ {id:"abc",n:"Cerámico 6,3×32 mm · acción rápida",v:"250 V",u:"Mayor capacidad de ruptura que el de vidrio.",m:[["B",["ABC"],a=>`ABC-${a}`],["M",["GBB"],a=>`GBB${a}`],["L",["314"],a=>`314 ${a}`,1],["E",["BBC"],a=>`BBC ${a}`]]},
+ {id:"mda",n:"Cerámico 6,3×32 mm · retardo",v:"250 V",u:"Motores pequeños y cargas con pico de arranque.",m:[["B",["MDA"],a=>`MDA-${a}`],["M",["GSA","GDA"],a=>`GSA${a}`],["L",["326"],a=>`326 ${a}`,1],["E",["BDA"],a=>`BDA ${a}`]]},
+ {id:"cnl",n:"Limitador atornillable (montacargas y baterías)",v:"32–130 V CC",u:"Montacargas, bancos de baterías y vehículos eléctricos.",m:[["B",["ANL","ACK"],a=>`ANL-${a}`],["M",["CNL"],a=>`CNL${a}`],["L",["CNL"],a=>`CNL ${a}`],["E",["ECK","ELNE"],a=>`ECK ${a}`]]}
+];
+// tabla de detección: prefijos ordenados del más largo al más corto
+const DET=[];FAM.forEach(f=>f.m.forEach(([b,ps,fmt,nodet])=>{if(!nodet)ps.forEach(p=>DET.push({p,f,b}))}));
+DET.sort((a,b)=>b.p.length-a.p.length);
+
+function parseAmp(rest){
+  rest=rest.replace(/^[-\s]+/,"");
+  let m;
+  if((m=rest.match(/^(\d+)[-\s]?(\d+)\/(\d+)/))&&+m[3]>+m[2]) return {v:+m[1]+ +m[2]/ +m[3],t:`${m[1]}-${m[2]}/${m[3]}`};
+  if((m=rest.match(/^(\d+)\/(\d+)/))) return {v:+m[1]/ +m[2],t:`${m[1]}/${m[2]}`};
+  if((m=rest.match(/^(\d+[.,]\d+)/))) {const v=parseFloat(m[1].replace(",","."));return {v,t:String(v)};}
+  if((m=rest.match(/^0*(\d+)/))&&m[1]!=="") return {v:+m[1],t:m[1]};
+  return null;
+}
+function detect(raw){
+  if(!raw) return null;
+  const s=String(raw).toUpperCase().replace(/\s+/g," ").trim();
+  const letters=s.replace(/[\s.\-]/g,"");
+  for(const d of DET){
+    if(!letters.startsWith(d.p)) continue;
+    // ubica en s el punto después del prefijo
+    let i=0,c=0; while(i<s.length&&c<d.p.length){ if(!/[\s.\-]/.test(s[i])) c++; i++; }
+    const amp=parseAmp(s.slice(i));
+    if(amp&&amp.v>0&&amp.v<=6000) return {f:d.f,b:d.b,amp};
+  }
+  return null;
+}
+window.fuseDetect=detect;
+
+const INVD=(window.INV||[]).map(detect).filter(Boolean);
+const CATD=P.map((p,i)=>({d:detect(p[2]),i})).filter(x=>x.d);
+function stockFor(f,v){
+  const cat=CATD.filter(x=>x.d.f.id===f.id&&Math.abs(x.d.amp.v-v)<1e-6).map(x=>P[x.i][2]);
+  const inv=INVD.some(d=>d.f.id===f.id&&Math.abs(d.amp.v-v)<1e-6);
+  return {cat,inv:inv||cat.length>0};
+}
+const fmtA=v=>(Math.round(v*100)/100).toString().replace(".",",")+" A";
+const waBtn=(txt,label)=>`<a class="btn btn-wa btn-sm" href="${waLink(txt)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>${label}</a>`;
+
+/* ---- Tabs ---- */
+const tabs=[["t-eq","p-eq"],["t-mo","p-mo"],["t-id","p-id"]];
+tabs.forEach(([t,p])=>document.getElementById(t).addEventListener("click",()=>{tabs.forEach(([t2,p2])=>{document.getElementById(t2).setAttribute("aria-selected",t2===t);document.getElementById(p2).hidden=p2!==p});}));
+function goTab(t){document.getElementById(t).click();}
+
+/* ---- 1. Equivalencias ---- */
+const eqIn=document.getElementById("eq-q"),eqOut=document.getElementById("eq-out");
+function renderEq(){
+  const q=eqIn.value.trim();
+  if(!q){eqOut.innerHTML=`<div class="empty-t"><b>Tu equivalente aparecerá aquí</b>Escribe la referencia como aparece en la etiqueta del fusible. Por ejemplo: <span class="mono">LPJ-30SP</span>, <span class="mono">TRS60R</span> o <span class="mono">KTK-10</span>.</div>`;return;}
+  const d=detect(q);
+  if(!d){eqOut.innerHTML=`<div class="res"><div class="res-head"><span class="k">No la reconocemos aún</span><span class="v">${esc(q.toUpperCase())}</span><span class="s">Puede ser una serie especial, europea (NH, gG, aR) o de media tensión.</span></div><div class="res-body"><p style="margin:0">Nuestro equipo la identifica por ti. Envíanos la referencia o una foto del fusible y te respondemos con el equivalente y el precio.</p><div class="res-acts">${waBtn(`Hola Suprinval, necesito el equivalente de este fusible: ${q}. ¿Lo tienen o lo pueden traer?`,"Identificar por WhatsApp")}</div></div></div>`;return;}
+  const {f,b,amp}=d;const st=stockFor(f,amp.v);
+  const rows=f.m.map(([br,ps,fmt])=>`<tr class="${br===b?"me":""}"><td>${BR[br]}</td><td><span class="pn">${esc(fmt(amp.t))}</span></td></tr>`).join("");
+  const stockHtml=st.inv?`<div class="stock yes"><span class="dot"></span><div><b>Tenemos esta serie de ${fmtA(amp.v)} en almacén</b>${st.cat.length?`En el catálogo: <span class="mono">${st.cat.map(esc).join(", ")}</span>. `:""}Confirma la disponibilidad por WhatsApp.</div></div>`:`<div class="stock no"><span class="dot"></span><div><b>Lo traemos bajo pedido</b>No lo vemos en el inventario de hoy, pero lo importamos con cualquiera de estas marcas.</div></div>`;
+  const msg=`Hola Suprinval, busco ${q.toUpperCase()} (${f.n}, ${fmtA(amp.v)}, ${f.v}) o su equivalente. ¿Lo tienen?`;
+  eqOut.innerHTML=`<div class="res"><div class="res-head"><span class="k">${esc(f.n)} · ${esc(f.v)}</span><span class="v">${fmtA(amp.v)}</span><span class="s">${esc(f.u)}</span></div><div class="res-body"><table class="eqtable"><tbody>${rows}</tbody></table>${stockHtml}<div class="res-acts">${waBtn(msg,"Cotizar este fusible")}${st.cat.length?`<button type="button" class="btn btn-ghost btn-sm" style="color:var(--ink)" data-cat="${esc(st.cat[0])}">Ver en catálogo</button>`:""}</div></div></div>`;
+}
+eqIn.addEventListener("input",renderEq);
+document.getElementById("eq-ex").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;eqIn.value=b.textContent;renderEq();});
+document.getElementById("asistente").addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b)return;const qq=document.getElementById("q");qq.value=b.dataset.cat;qq.dispatchEvent(new Event("input"));document.getElementById("catalogo").scrollIntoView({behavior:"smooth"});});
+
+/* ---- 2. Motor ---- */
+// NEC Tabla 430.250 (trifásico, 460 V) y 430.248 (monofásico, 230 V)
+const HP3=[[.5,1.1],[.75,1.6],[1,2.1],[1.5,3],[2,3.4],[3,4.8],[5,7.6],[7.5,11],[10,14],[15,21],[20,27],[25,34],[30,40],[40,52],[50,65],[60,77],[75,96],[100,124],[125,156],[150,180],[200,240],[250,302],[300,361],[350,414],[400,477],[450,515],[500,590]];
+const HP1=[[1/6,2.2],[.25,2.9],[1/3,3.6],[.5,4.9],[.75,6.9],[1,8],[1.5,10],[2,12],[3,17],[5,28],[7.5,40],[10,50]];
+function interp(t,x){if(x<=t[0][0])return t[0][1]*x/t[0][0];for(let i=1;i<t.length;i++){if(x<=t[i][0]){const[a,ya]=t[i-1],[b,yb]=t[i];return ya+(yb-ya)*(x-a)/(b-a);}}const[a,ya]=t[t.length-1];return ya*x/a;}
+const STD=[1,1.25,1.4,1.6,1.8,2,2.25,2.5,2.8,3,3.2,3.5,4,4.5,5,5.6,6,6.25,7,7.5,8,9,10,12,15,17.5,20,25,30,35,40,45,50,60,70,80,90,100,110,125,150,175,200,225,250,300,350,400,450,500,600];
+const up=x=>STD.find(s=>s>=x-1e-9)||null;
+const dn=x=>[...STD].reverse().find(s=>s<=x+1e-9)||STD[0];
+function renderMo(){
+  const mode=document.querySelector('input[name="mo-mode"]:checked').value;
+  document.getElementById("mo-fla-row").hidden=mode!=="fla";document.getElementById("mo-hp-row").hidden=mode!=="hp";
+  const [vs,ph]=document.getElementById("mo-v").value.split("-");const V=+vs,tri=ph==="3";
+  let fla,src;
+  if(mode==="fla"){fla=parseFloat(document.getElementById("mo-fla").value);src="placa del motor";}
+  else{let p=parseFloat(document.getElementById("mo-p").value);if(document.getElementById("mo-pu").value==="kw")p=p/0.746;
+    fla=tri?interp(HP3,p)*460/V:interp(HP1,p)*230/V;src=`NEC ${tri?"430.250":"430.248"} para ${(Math.round(p*10)/10).toString().replace(".",",")} HP`;}
+  const out=document.getElementById("mo-out");
+  if(!(fla>0)||fla>480){out.innerHTML=`<div class="empty-t"><b>Revisa los datos</b>Escribe una corriente entre 0,1 y 480 A o la potencia del motor.</div>`;return;}
+  const ol=document.getElementById("mo-ol").value==="si";
+  const rec=up(fla*(ol?1.25:1.15)), max=dn(fla*1.75);
+  const recF= rec&&rec<=max?rec:max;
+  const v600=V>250;
+  const opts=[];
+  if(recF<=30&&v600) opts.push(["Clase CC retardo (compacto, 10×38 con ranura)",["ATDR","LP-CC","CCMR"].map(p=>p+" "+recF).join(" · "),"cct"]);
+  if(recF<=600) opts.push(["Clase J retardo (compacto, limitador)",[`AJT${recF}`,`LPJ-${recF}SP`,`JTD ${recF}`].join(" · "),"jtd"]);
+  if(recF<=600) opts.push([`Clase RK5 doble elemento ${v600?"600":"250"} V (portafusible tipo R)`,(v600?[`TRS${recF}R`,`FRS-R-${recF}`,`FLSR ${recF}`]:[`TR${recF}R`,`FRN-R-${recF}`,`FLNR ${recF}`]).join(" · "),v600?"rk5h":"rk5l"]);
+  const stocked=opts.map(o=>{const f=FAM.find(x=>x.id===o[2]);return stockFor(f,recF);});
+  const anyStock=stocked.some(s=>s.inv);
+  const msg=`Hola Suprinval, necesito fusibles para un motor ${tri?"trifásico":"monofásico"} de ${fmtA(fla)} a ${V} V. El asistente sugiere fusible de doble elemento de ${recF} A (${opts.map(o=>o[0].split(" (")[0]).join(" / ")}). ¿Me cotizan?`;
+  out.innerHTML=`<div class="res"><div class="res-head"><span class="k">Fusible recomendado · doble elemento con retardo</span><span class="v">${recF} A</span><span class="s">Motor de ${fmtA(fla)} (${esc(src)}) a ${V} V ${tri?"trifásico":"monofásico"}</span></div><div class="res-body">
+  <div class="kpis"><div class="kpi"><div class="l">Corriente motor</div><div class="n">${fmtA(fla)}</div></div><div class="kpi main"><div class="l">Recomendado</div><div class="n">${recF} A</div></div><div class="kpi"><div class="l">Máx. NEC 175 %</div><div class="n">${max} A</div></div></div>
+  <p class="hint" style="margin:0">${ol?"Con relé térmico, el fusible protege contra cortocircuito y respalda al relé: lo dimensionamos al 125 % de la corriente, que da buena coordinación sin disparos en el arranque.":"Sin relé térmico, el fusible también debe proteger contra sobrecarga: lo dimensionamos al 115 % de la corriente (125 % si el factor de servicio del motor es 1,15 o más)."} Si el fusible se abre al arrancar, se puede subir hasta ${max} A.</p>
+  <div class="opts">${opts.map((o,i)=>`<div class="opt"><b>${esc(o[0])}</b><small>${stocked[i].inv?"✓ En almacén":"Bajo pedido"}</small><span class="codes">${esc(o[1])}</span></div>`).join("")}</div>
+  ${anyStock?`<div class="stock yes"><span class="dot"></span><div><b>Tenemos opciones de ${recF} A en almacén</b>Confirma cantidad y marca por WhatsApp.</div></div>`:`<div class="stock no"><span class="dot"></span><div><b>Lo traemos bajo pedido</b>Te cotizamos con plazo de entrega.</div></div>`}
+  <div class="res-acts">${waBtn(msg,"Cotizar 3 fusibles")}</div></div></div>`;
+}
+document.getElementById("p-mo").addEventListener("input",renderMo);
+document.getElementById("p-mo").addEventListener("change",renderMo);
+
+/* ---- 3. Identificar por forma ---- */
+const S=(body)=>`<svg viewBox="0 0 160 56" aria-hidden="true">${body}</svg>`;
+const cap='fill="var(--teal)"',bod='fill="var(--surface)" stroke="var(--ink)" stroke-width="2"';
+const SH=[
+ {t:"Tubito de vidrio",m:"6,3×32 mm o 5×20 mm",d:S(`<rect x="34" y="20" width="92" height="16" rx="3" fill="var(--tint)" stroke="var(--ink)" stroke-width="2"/><rect x="24" y="18" width="16" height="20" rx="3" ${cap}/><rect x="120" y="18" width="16" height="20" rx="3" ${cap}/><path d="M40 28c12-7 20 7 40 0s28 7 40 0" fill="none" stroke="var(--ink)" stroke-width="1.6"/>`),fams:["agc","mdl"],q:"AGC",tip:"Si el filamento se ve recto y fino es de acción rápida (AGC). Si tiene un resorte o una bolita de soldadura, es de retardo (MDL)."},
+ {t:"Tubito cerámico (blanco)",m:"6,3×32 mm",d:S(`<rect x="34" y="20" width="92" height="16" rx="3" ${bod}/><rect x="24" y="18" width="16" height="20" rx="3" ${cap}/><rect x="120" y="18" width="16" height="20" rx="3" ${cap}/>`),fams:["abc","mda"],q:"ABC",tip:"ABC es de acción rápida; MDA es de retardo para cargas con arranque."},
+ {t:"Midget 10×38 mm",m:"13/32\" × 1-1/2\", sin ranura",d:S(`<rect x="38" y="16" width="84" height="24" rx="3" ${bod}/><rect x="26" y="14" width="18" height="28" rx="3" ${cap}/><rect x="116" y="14" width="18" height="28" rx="3" ${cap}/>`),fams:["mfa","mtd","mtd5"],q:"KTK",tip:"Mira la letra: KTK/ATM son rápidos; FNM/TRM y FNQ/ATQ son de retardo."},
+ {t:"10×38 mm con ranura",m:"Clase CC: un casquillo con cuello",d:S(`<rect x="38" y="16" width="84" height="24" rx="3" ${bod}/><rect x="26" y="14" width="18" height="28" rx="3" ${cap}/><rect x="116" y="14" width="10" height="28" rx="2" ${cap}/><rect x="126" y="20" width="4" height="16" ${cap}/><rect x="130" y="14" width="8" height="28" rx="2" ${cap}/>`),fams:["cct","ccx","ccf"],q:"LP-CC",tip:"La ranura evita poner un fusible de menor capacidad. Motores: ATDR/LP-CC/CCMR. Transformadores de control: ATQR/FNQ-R."},
+ {t:"Cartucho con casquillos",m:"30–60 A · 14×51 hasta 27×127 mm",d:S(`<rect x="34" y="12" width="92" height="32" rx="4" ${bod}/><rect x="20" y="10" width="20" height="36" rx="4" ${cap}/><rect x="120" y="10" width="20" height="36" rx="4" ${cap}/><rect x="56" y="22" width="48" height="12" rx="2" fill="var(--leaf)" opacity=".7"/>`),fams:["rk5h","rk5l","k5l","k5h"],q:"TRS",tip:"Si un casquillo tiene una ranura anular es Clase R (RK5/RK1). Lisos: Clase K5 (OT/NON). Mientras más largo, mayor tensión (600 V)."},
+ {t:"Con cuchillas",m:"70 A en adelante",d:S(`<rect x="44" y="12" width="72" height="32" rx="4" ${bod}/><rect x="8" y="22" width="40" height="12" rx="2" ${cap}/><rect x="112" y="22" width="40" height="12" rx="2" ${cap}/><circle cx="20" cy="28" r="3" fill="var(--surface)"/><circle cx="140" cy="28" r="3" fill="var(--surface)"/>`),fams:["rk5h","jtd","t6"],q:"FRS-R",tip:"Cuerpo redondo y largo: Clase R. Más corto y con una perforación en la cuchilla: Clase J. Muy delgado y corto: Clase T."},
+ {t:"Ultrarrápido de pernos",m:"Cuerpo cerámico + orejas perforadas",d:S(`<rect x="46" y="10" width="68" height="36" rx="6" ${bod}/><rect x="10" y="20" width="40" height="16" rx="2" ${cap}/><rect x="110" y="20" width="40" height="16" rx="2" ${cap}/><path d="M78 16l-8 14h8l-4 12 14-16h-8l4-10z" fill="var(--leaf)"/>`),fams:["s70","s50","s25"],q:"FWP",tip:"Protegen variadores, rectificadores y UPS. La tensión está en el código: A70/FWP = 700 V, A50/FWH = 500 V, A25/FWX = 250 V."},
+ {t:"Botella con rosca",m:"Diazed E27/E33 o Neozed",d:S(`<rect x="62" y="6" width="36" height="12" rx="3" ${cap}/><rect x="56" y="16" width="48" height="30" rx="6" ${bod}/><rect x="68" y="44" width="24" height="10" rx="2" ${cap}/>`),fams:[],q:"",tip:"Europeo (DIN). Dinos la rosca (E16, E27, E33 o D01/D02) y el amperaje del botón de color: tenemos cientos en almacén."},
+ {t:"Cuadrado con cuchillas (NH)",m:"Tamaños 000 a 3",d:S(`<rect x="56" y="8" width="48" height="40" rx="3" ${bod}/><rect x="16" y="22" width="44" height="12" rx="2" ${cap}/><rect x="100" y="22" width="44" height="12" rx="2" ${cap}/><rect x="72" y="2" width="16" height="8" rx="2" fill="var(--ink)"/>`),fams:[],q:"",tip:"Fusible NH europeo (gG o aR ultrarrápido). Envíanos foto de la etiqueta: tamaño (NH00, NH1…), amperaje y tensión."},
+ {t:"Media tensión",m:"Tubo largo, 2,4 a 38 kV",d:S(`<rect x="22" y="18" width="116" height="20" rx="10" ${bod}/><rect x="10" y="20" width="18" height="16" rx="4" ${cap}/><rect x="132" y="20" width="18" height="16" rx="4" ${cap}/><text x="80" y="32" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" font-weight="600" fill="var(--ink)">kV</text>`),fams:[],q:"",tip:"Transformadores de potencial, arrancadores de MT y cortacircuitos. Envíanos la referencia (EJO, CLS, CEF, HH…) y la tensión."}
+];
+const shEl=document.getElementById("shapes"),idOut=document.getElementById("id-out");
+shEl.innerHTML=SH.map((s,i)=>`<button type="button" class="shape" data-i="${i}" aria-pressed="false">${s.d}<b>${s.t}</b><span>${s.m}</span></button>`).join("");
+idOut.innerHTML=`<div class="empty-t"><b>Toca una forma</b>Te diremos qué familia de fusible es, qué referencias buscar en la etiqueta y si lo tenemos.</div>`;
+shEl.addEventListener("click",e=>{
+  const b=e.target.closest(".shape");if(!b)return;shEl.querySelectorAll(".shape").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  const s=SH[+b.dataset.i];const fams=s.fams.map(id=>FAM.find(f=>f.id===id));
+  const msg=`Hola Suprinval, tengo un fusible tipo "${s.t}" (${s.m}). Les envío foto de la etiqueta para que me ayuden a identificarlo y cotizarlo.`;
+  idOut.innerHTML=`<div class="res"><div class="res-head"><span class="k">Tu fusible parece</span><span class="v">${esc(s.t)}</span><span class="s">${esc(s.tip)}</span></div><div class="res-body">${fams.length?`<div class="opts">${fams.map(f=>`<div class="opt"><b>${esc(f.n)} · ${esc(f.v)}</b><small>${esc(f.u)}</small><span class="codes">${f.m.map(m=>({LPCC:"LP-CC",FRSR:"FRS-R",TRSR:"TRS-R",FNQR:"FNQ-R",KTKR:"KTK-R",LPSRK:"LPS-RK",LPNRK:"LPN-RK",KRPC:"KRP-C",A6DR:"A6D-R",A2DR:"A2D-R",FRNR:"FRN-R",TRR:"TR-R"})[m[1][0]]||m[1][0]).join(" · ")}</span></div>`).join("")}</div>`:""}<div class="res-acts">${s.q?`<button type="button" class="btn btn-solid btn-sm" data-goeq="${esc(s.q)}">Buscar el equivalente exacto</button>`:""}${waBtn(msg,"Enviar foto por WhatsApp")}</div></div></div>`;
+});
+idOut.addEventListener("click",e=>{const b=e.target.closest("[data-goeq]");if(!b)return;goTab("t-eq");eqIn.value=b.dataset.goeq+" ";eqIn.focus();renderEq();});
+
+document.querySelectorAll("#asistente [data-wa]").forEach(a=>a.href=waLink(a.dataset.wa));
+renderEq();renderMo();
+})();
+
 </script>
 
 </body>
